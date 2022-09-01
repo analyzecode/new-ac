@@ -315,7 +315,6 @@ a.arrow-down-home {
     }
     img.home-banner-illustration{
         width: 100%;
-        margin: 2% 0;
     }
     header{
         border-radius: 10px;
@@ -342,6 +341,6 @@ a.arrow-down-home {
 
     a.explore-button {
         font-size: 13px;
-        margin: 7% 5%;
+        margin: 3%;
     }
 }
