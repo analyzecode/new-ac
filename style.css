@@ -304,9 +304,21 @@ a.arrow-down-home {
 @media (max-width: 576px) {
     .large-heading {
         width: 160%;
+        font-size: larger;
+    }
+    .web-banner-txt .sub-heading{
+        font-size: 13px;
+        margin: 2% 0;
+    }
+    header{
+        border-radius: 10px;
+        margin: 2% 0;
     }
     .logo{
         width: 80%;
+    }
+    ul.content-qualities li i.bx-md {
+        font-size: 1.2rem !important;
     }
     i.hamburger-menu-ico{
         display: block;
