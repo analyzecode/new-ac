@@ -303,16 +303,23 @@ a.arrow-down-home {
 
 @media (max-width: 576px) {
     .large-heading {
-        width: 160%;
+        width: 80%;
         font-size: larger;
+    }
+    .web-banner{
+        flex-direction: column;
     }
     .web-banner-txt .sub-heading{
         font-size: 13px;
         margin: 2% 0;
     }
+    img.home-banner-illustration{
+        width: 100%;
+        margin: 2% 0;
+    }
     header{
         border-radius: 10px;
-        margin: 2% 0;
+        margin: 4% 0 2%;
     }
     .logo{
         width: 80%;
