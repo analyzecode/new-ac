@@ -261,7 +261,7 @@ margin: 2% 0;
 
 .tutorial-banner-text .lang-defination{
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.13rem;
     line-height: 28px;
     font-weight: 500;
     margin-top: 1%;
@@ -344,6 +344,7 @@ margin: 2% 0;
         font-size: 1rem;
         padding: 2% 4%;
         color: #4b4b4b;
+        cursor: pointer;
         margin: 2%;
         text-decoration: none;
         font-weight: 500;
@@ -351,10 +352,6 @@ margin: 2% 0;
     .exnextbtns {
         display: flex;
         justify-content: space-between;
-    }
-    .tut-content-show-content a {
-        color: #0556F3;
-        text-decoration: none;
     }
     .next-page-btn {
         background: #0556f3;
@@ -366,7 +363,9 @@ margin: 2% 0;
         justify-content: space-between;
         border-radius: 5px;
     }
-
+    .previous-page-btn{
+        background: #f9fafe;
+    }
     .pagination-turnover {
         width: 60%;
         font-weight: 500;
