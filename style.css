@@ -217,14 +217,14 @@ a.arrow-down-home {
     justify-content: center;
     align-items: center;
 }
-.tutorial-banner-text .sub-nav{
+.sub-nav{
     margin: 3% 0 2% 0;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
-.tutorial-banner-text .sub-nav a{
+.sub-nav a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -387,6 +387,92 @@ margin: 2% 0;
         rotate: 180deg;
         transition: rotate 0.5s ease;
     }
+footer{
+    background-color: #273343;
+    color: #fff;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+}
+footer .footer-l-block{
+    width: 30%;
+    padding-top: 0.9%;
+}
+footer .footer-s-block{
+    width: 18%;
+    padding-top: 0.9%;
+    line-height: 24pt;
+}
+footer .follow-us-heading{
+    font-size: 1.2rem;
+    margin: 4% 0 4% 4%;
+    font-weight: 500;
+}
+.footer-l-block .follow-us-heading span {
+    font-weight: 400;
+    color: #babdc3;
+}
+footer .social-links-container{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+footer .heading{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 2%;
+}
+footer .footer-s-block ul li {
+    list-style: none;
+}
+footer .footer-s-block ul li a{
+    color: #A9ADB4;
+    text-decoration: none;
+}
+footer .social-links-container a{
+    color: #babdc3;
+    margin: 0 2.5%;
+}
+footer .logo{
+    width: 100%;
+}
+footer a{
+    text-decoration: none;
+}
+footer .logo-text{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+footer form{
+    margin: 4% 0;
+    display: flex;
+}
+footer input[type=email]{
+    border: none;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    padding: 4%;
+    background-color: #dfdfdf;
+}
+footer input[type=submit]{
+    border: none;
+    padding: 3%;
+    border-radius: 0 6px 6px 0;
+    color: #fff;
+    font-size: inherit;
+    background-color: #256af0;
+}
+footer input[type=submit]:hover{
+    background-color: #0556F3;
+}
+p.copyright-statement{
+    background-color: #232E3C;
+    color: #A9ADB4;
+    font-size:0.9rem;
+    padding: 0.9% 3.5%;
+}
 @media (max-width: 1140px) {
     nav {
         width: 55%;
@@ -471,9 +557,12 @@ margin: 2% 0;
     img.home-banner-illustration{
         width: 100%;
     }
+    .medium-heading{
+        font-size: 1.9rem;
+    }
     header{
         border-radius: 10px;
-        margin: 4% 0 2%;
+        margin: 4% 2% 3%;
     }
     .logo{
         width: 80%;
@@ -481,19 +570,52 @@ margin: 2% 0;
     ul.content-qualities li i.bx-md {
         font-size: 1.2rem !important;
     }
+    .sub-nav .bx-md {
+        font-size: 1.2rem !important;
+        margin-right: 1%;
+    }
+    .sub-nav a{
+        font-size: 1.19rem;
+    }
     i.hamburger-menu-ico{
         display: block;
         text-align: right;
         width: 5%;
     }
+    .jsblob1{
+        left: -24px;
+    }
+    .jsblob1 img{
+        height: 188px;
+        width: 127px;
+    }
     nav {
         display: none;
     }
 
-
+    .tutorial-banner-top.mobile-banner{
+        display: flex!important;
+    }
+    .desktop-tutorial{
+        display: none;
+    }
     a.explore-button {
         margin: 3%;
     }
+
+    .tutorial-banner-top{
+        flex-direction: column;
+        align-items: center;
+        }
+        .tutorial-banner-text{
+        width: 100%;
+        flex-direction: row;
+        margin: 6% 20%;
+        }
+        .tutorial-banner-text img{
+            width: 57px;
+            margin-left: 16%;
+        }	
 }
 
 /* blobs , shapes */
