@@ -570,12 +570,18 @@ p.copyright-statement{
     ul.content-qualities li i.bx-md {
         font-size: 1.2rem !important;
     }
+    .sub-nav{
+        margin: 2%;
+        margin-left: 26%;
+    }
     .sub-nav .bx-md {
-        font-size: 1.2rem !important;
-        margin-right: 1%;
+        font-size: 1.3rem !important;
+        margin-right: 2%;
     }
     .sub-nav a{
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        width: 50%;
+        justify-content: initial;
     }
     i.hamburger-menu-ico{
         display: block;
@@ -611,6 +617,7 @@ p.copyright-statement{
         width: 100%;
         flex-direction: row;
         margin: 6% 20%;
+        margin-bottom: 2%;
         }
         .tutorial-banner-text img{
             width: 57px;
