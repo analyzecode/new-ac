@@ -473,6 +473,16 @@ p.copyright-statement{
     font-size:0.9rem;
     padding: 0.9% 3.5%;
 }
+/* blobs , shapes */
+.jsblob1, .jsblob2{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+.jsblob2{
+    right: -16px;
+    top: 243px;
+}
 @media (max-width: 1140px) {
     nav {
         width: 55%;
@@ -595,12 +605,20 @@ p.copyright-statement{
         height: 188px;
         width: 127px;
     }
+    .jsblob2{
+        right: -7px;
+        top: 315px;
+    }
+    .jsblob2 img{
+        height: 57px;
+    }
     nav {
         display: none;
     }
 
     .tutorial-banner-top.mobile-banner{
         display: flex!important;
+        padding-bottom: 9%;
     }
     .desktop-tutorial{
         display: none;
@@ -628,13 +646,3 @@ p.copyright-statement{
         }	
 }
 
-/* blobs , shapes */
-.jsblob1, .jsblob2{
-    position: absolute;
-    z-index: -1;
-    top: 0;
-}
-.jsblob2{
-    right: -16px;
-    top: 243px;
-}
