@@ -502,6 +502,15 @@ p.copyright-statement{
     a.explore-button {
         margin: 4%;
     }
+    .tut-content-show-content{
+        width: 100%;
+        }
+        .tut-content-show-content img{
+        width: -webkit-fill-available;
+        }
+        .tut-content-sidebar{
+        display: none;
+        }
 }
 
 @media (max-width: 992px) {
@@ -585,11 +594,11 @@ p.copyright-statement{
         margin-left: 17%;
     }
     .sub-nav .bx-md {
-        font-size: 1.7rem !important;
+        font-size: 1.5rem !important;
         margin-right: 2%;
     }
     .sub-nav a{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         width: 40%;
         justify-content: initial;
     }
@@ -644,5 +653,6 @@ p.copyright-statement{
             width: 57px;
             margin-left: 16%;
         }	
+        
 }
 
