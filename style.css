@@ -529,6 +529,9 @@ p.copyright-statement{
     .logo-text{
         margin-left: 0;
     }
+    img.hr-line{
+        width: 650px;
+    }
     .next-page-btn{
         padding: 3%;
         width: 42%;
