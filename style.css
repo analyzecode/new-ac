@@ -525,6 +525,32 @@ p.copyright-statement{
     ul.content-qualities li i.bx-md {
         font-size: 1.55rem !important;
     }
+    .logo-text{
+        margin-left: 0;
+    }
+    .next-page-btn{
+        padding: 3%;
+        width: 42%;
+        }
+        footer{
+        flex-direction: column;
+        }
+        footer .footer-l-block{
+        width: 100%;
+        padding-left: 3%;
+
+        }
+        footer .footer-s-block{
+            width: 100%;
+            padding-left: 3%;
+            margin-top: 3%;
+        }
+        footer .footer-s-block ul li a{
+        font-size: 1.3rem;
+        }
+        footer .footer-l-block:first-child{
+            padding-left: 0%;
+        }
 }
 
 @media (max-width: 768px) {
