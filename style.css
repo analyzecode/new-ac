@@ -515,7 +515,9 @@ p.copyright-statement{
 
 @media (max-width: 992px) {
    
-
+    .tutcontent-description{
+        font-size: 1.19rem;
+    }
     ul.content-qualities li {
         margin: 3% 0;
     }
