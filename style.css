@@ -147,9 +147,9 @@ a.explore-button:hover {
     margin: 2% 0;
 }
 .small-heading{
-font-size: 2rem;
+font-size: 1.6rem;
     width: fit-content;
-    font-weight: 600;
+    font-weight: 700;
     color: #121212;
     padding-bottom: 1%;
     margin-bottom: 3%;
@@ -294,7 +294,6 @@ margin: 2% 0;
     border-top: 0;
 }
 .tutcontent-subheading {
-    font-size: 1.2rem;
     font-weight: 500;
     color: #121212;
     margin: 3% 0;
@@ -333,7 +332,7 @@ margin: 2% 0;
         border-left: 4px solid blue;
         background-color: #e5eeff;
     }
-    .hr-line{
+    img.hr-line{
         margin: 3% 0;
     }
     .tut-content-show-content li{
@@ -505,7 +504,7 @@ p.copyright-statement{
     .tut-content-show-content{
         width: 100%;
         }
-        .tut-content-show-content img{
+        img{
         width: -webkit-fill-available;
         }
         .tut-content-sidebar{
