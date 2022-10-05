@@ -552,6 +552,12 @@ p.copyright-statement{
         footer .footer-s-block ul li a{
         font-size: 1.3rem;
         }
+        footer input[type=email]{
+            width: 45%;
+        }
+        .footer-l-block.subscribe .heading{
+            margin-top: 3%;
+        }
         footer .footer-l-block.subscribe{
             padding-left: 3%;
             width: 80%;
