@@ -542,10 +542,13 @@ p.copyright-statement{
         padding-left: 3%;
 
         }
+        footer .logo{
+            justify-content: unset;
+        }
         footer .footer-s-block{
-            width: 100%;
+            width: 80%;
             padding-left: 3%;
-            margin-top: 3%;
+            margin-top: 5%;
         }
         footer .footer-s-block ul li a{
         font-size: 1.3rem;
