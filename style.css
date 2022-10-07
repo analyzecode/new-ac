@@ -591,6 +591,9 @@ p.copyright-statement{
     .tutorial-banner-text .lang-defination{
         margin: 2% 5%;
     }
+    .tutcontent-subheading{
+        font-size: 1.8rem;
+    }
     a.explore-button {
         padding: 2.5%;
     }
@@ -622,7 +625,7 @@ p.copyright-statement{
         width: 100%;
     }
     .medium-heading{
-        font-size: 1.9rem;
+        font-size: 2.1rem;
     }
     header{
         border-radius: 10px;
