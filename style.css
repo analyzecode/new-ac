@@ -588,7 +588,9 @@ p.copyright-statement{
         width: 90%;
         margin: 4% 0;
     }
-
+    .tutorial-banner-text .lang-defination{
+        margin: 2% 5%;
+    }
     a.explore-button {
         padding: 2.5%;
     }
