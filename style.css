@@ -295,6 +295,7 @@ margin: 2% 0;
 }
 .tutcontent-subheading {
     font-weight: 500;
+    font-size: 1.3rem;
     color: #121212;
     margin: 3% 0;
 }
@@ -593,7 +594,7 @@ p.copyright-statement{
     }
 
     .search-bar i.bx-search {
-        padding: 9%;
+        padding: 15%;
         font-size: 1.7rem !important;
     }
     .logo img {
