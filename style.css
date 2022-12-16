@@ -276,7 +276,7 @@ margin: 2% 0;
     background: #ffffff;
     background-blend-mode: normal;
     box-shadow: 0px 2px 4px rgb(100 100 100 / 40%);
-    width: 40%;
+    width: 29%;
     height: 100%;
     margin-right: 3%;
 }
@@ -311,7 +311,7 @@ margin: 2% 0;
 }
 .tutcontent-description {
     margin: 3% 0;
-    line-height: 33px;
+    line-height: 30px;
     font-size: 1rem;
 }
 .tut-content-sidebar summary{
@@ -333,11 +333,22 @@ margin: 2% 0;
         border-left: 4px solid blue;
         background-color: #e5eeff;
     }
-    img.hr-line{
+    .tut-content-sidebar a i{
+        margin-right: 4%;
+    }
+    hr.hr-line{
         margin: 3% 0;
+        background: #d3dce6;
+        border: none;
+        height: 1px;
+    }
+    .tut-content-show-content{
+        width: 80%;
     }
     .tut-content-show-content li{
         margin-left: 3%;
+        line-height: 31px;
+        font-size: 1.17rem;
     }
     .tut-content-sidebar a {
         display: block;
@@ -348,6 +359,9 @@ margin: 2% 0;
         margin: 2%;
         text-decoration: none;
         font-weight: 500;
+    }
+    .tut-content-sidebar a:visited{
+        color: #0556f3;
     }
     .exnextbtns {
         display: flex;
@@ -497,7 +511,9 @@ p.copyright-statement{
     .web-banner-txt .sub-heading {
         width: 80%;
     }
-
+    .top-area img{
+        width: unset;
+    }
 
     a.explore-button {
         margin: 4%;
@@ -511,12 +527,15 @@ p.copyright-statement{
         .tut-content-sidebar{
         display: none;
         }
+        .jsblob2{
+            top: 201px;
+        }
 }
 
 @media (max-width: 992px) {
    
     .tutcontent-description{
-        font-size: 1.19rem;
+        font-size: 1.18rem;
     }
     ul.content-qualities li {
         margin: 3% 0;
@@ -530,8 +549,19 @@ p.copyright-statement{
     .logo-text{
         margin-left: 0;
     }
-    img.hr-line{
-        width: 650px;
+    .tutcontent-subheading {
+        font-weight: 500;
+        font-size: 1.18rem;
+    }
+    bx-menu{
+        display: initial;
+        font-size: 1.55rem!important;
+        color: #0566f3;
+        border-radius: 3px;
+        border: 1px solid #0566f3;
+        position: absolute;
+        left: 337px;
+        top: 503px;
     }
     .next-page-btn{
         padding: 3%;
