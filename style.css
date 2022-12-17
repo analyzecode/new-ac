@@ -22,7 +22,9 @@ header {
     color: #000;
     display: flex;
 }
-
+img.hr-line{
+    margin: 2% 0;
+}
 .top-area,
 .top-header-area{
     background: rgba(249, 242, 236, 0.8);
@@ -295,6 +297,7 @@ margin: 2% 0;
 }
 .tutcontent-subheading {
     font-weight: 500;
+    line-height: 30px;
     font-size: 1.4rem;
     color: #121212;
     margin: 3% 0;
@@ -456,6 +459,7 @@ footer a{
 footer .logo-text{
     text-decoration: none;
     color: white;
+    margin-left: 2%;
     font-weight: 500;
     font-size: 1.5rem;
 }
@@ -511,9 +515,6 @@ p.copyright-statement{
     .web-banner-txt .sub-heading {
         width: 80%;
     }
-    .top-area img{
-        width: unset;
-    }
 
     a.explore-button {
         margin: 4%;
@@ -521,7 +522,7 @@ p.copyright-statement{
     .tut-content-show-content{
         width: 100%;
         }
-        img{
+        .tut-content-block img{
         width: -webkit-fill-available;
         }
         .tut-content-sidebar{
