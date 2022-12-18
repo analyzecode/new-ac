@@ -21,8 +21,8 @@
                 <summary>JS Introduction <i class='bx bxs-chevron-down'></i></summary>
                 <ul>
                     <li><a class="tutitemactive" href="#"><i class="fa-regular fa-circle-check"></i>Getting Started</a></li>
-                    <li><a href="js-tut1.html#tutContentBlock"><i class="fa-regular fa-circle-check"></i>Ways to execute</a></li>
-                    <li><a href="js-tut1b.html#tutContentBlock"><i class="fa-regular fa-circle-check"></i>JS Variables</a></li>
+                    <li><a href="js-tut1.html"><i class="fa-regular fa-circle-check"></i>Ways to execute</a></li>
+                    <li><a href="js-tut1b.html"><i class="fa-regular fa-circle-check"></i>JS Variables</a></li>
                     <li><a href="js-tut1c.html"><i class="fa-regular fa-circle-check"></i>JS Let & Constant</a></li>
                     <li><a href="js-tut1d.html"><i class="fa-regular fa-circle-check"></i>JS console.log</a></li>
                     <li><a href="js-tut1e.html"><i class="fa-regular fa-circle-check"></i>JS Data types</a></li>
@@ -134,11 +134,69 @@
         <div class="tut-content-show-content">
             <p class="medium-heading">Getting Started With JavaScript</p>
             <p class="tutcontent-description">
-                JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.). There are also more advanced server side versions of JavaScript such as Node.js, which allow you to add more functionality to a website than downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
-            </p>
+                JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive e.g., having complex animations, clickable buttons, popup menus, etc. <br> There are also more advanced server side versions of JavaScript such as Node.js, React js, vue js etc.</p>
             
-            <p class="tutcontent-subheading">Now that you know how to run JavaScript, let's start learning the
-                fundamentals of JavaScript from the next tutorial.</p>
+            <p class="small-heading">JavaScript and the ECMAScript specification</p>
+                <p class="tutcontent-description">JavaScript is standardized at <a href="https://www.ecma-international.org/"> Ecma International </a> — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript. This standardized version of JavaScript, called <strong>ECMAScript</strong>, behaves the same way in all applications that support the standard.</p>
+            <img src="../../images/js-features.svg" alt="">
+            <ol class="big">
+                <li>
+                    <p class="tutcontent-description"><p class="small-heading"> Validating User's Input : </p>JavaScript is very useful while using forms. It has the capability to validate user input for errors and also saves time. If the user leaves a required field empty or the information is incorrect, JavaScript checks for them before sending the data over to the server.
+                    <p class="tutcontent-description"><strong>For example :</strong> <br>Try to set password less than 6 digits and submit , it will validate to set minimum 6 digits password :  </p>
+                        <form action="" name="validform" onsubmit="unsuffPass();">
+                            <input type="password" name="password" id="" placeholder="set password">
+                        <input type="submit">
+                    </form>
+                    </p>
+                </li>
+                <li>
+                    <p class="tutcontent-description">
+                      <p class="small-heading">Event handling : </p>
+                      An event is an action or an occurrence in a system that communicates about said occurrence so that you can respond to it somehow. For example, a user clicks on a button, and the system tells you to respond to the button click event with an action, say an information box.
+                      <p class="tutcontent-description"><strong>For example : </strong>Count the number of times the button is clicked using JavaScript</p>
+                      <button class="countme btn-design">Click me</button> <br>
+                      <span class="keyboard-shortcut">Number of times clicked : <span class="count">0</span> </span>
+                    </p>
+                </li>
+                <li>
+                    <p class="tutcontent-description">
+                        <p class="small-heading">Greater control : </p>
+                        JavaScript provides greater control to the browser rather than being completely dependent on the web servers. JavaScript provides various browsers with additional functionalities that help reduce server load and network traffic.
+                    </p>
+                </li>
+                <li>
+                    <p class="tutcontent-description">
+                        <p class="small-heading">Platform Independent</p>
+                        JavaScript is Platform Independent, which means you need to write the script once and can run it on any platform or browser without affecting the output of the Script.. Thus it can run on Windows, Macintosh, and other browser-supported systems.
+                    </p>
+                </li>
+                <li>
+                    <p class="tutcontent-description">
+                        <p class="small-heading">Handling Dates and Time</p>
+                        JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the <i>epoch</i>). The Date object is a built-in object in JavaScript that stores the date and time. It provides a number of built-in methods for formatting and managing that data.
+                        <p class="tutcontent-description"><strong>For example : </strong></p>
+                        <button class="gettime btn-design "onclick="document.querySelector('#timedate').innerHTML = Date();">Click me to display Date and time</button>
+                        <span id="timedate"></span>
+                    </p>
+                </li>
+                <li>
+                    <p class="tutcontent-description">
+                        <p class="small-heading">Generating HTML Content</p>
+                        JavaScript has very handy features to dynamically generate HTML content for the web. It allows us to add text, links, images, tables, etc. or to change html content design after an event occurrence.
+                        <p class="tutcontent-description"><strong>For example : </strong></p>
+                        <span class="keyboard-shortcut emojiblock">Click me to change mood <span id="emojichange">&#128512;</span> </span><br>
+                        <span class="keyboard-shortcut shapechangeblock">Click me to change the shape of : <i class='shape-change bx bx-circle'></i></span>
+                    </p>
+                </li>
+                <li>
+                    <p class="tutcontent-description">
+                        <p class="small-heading">Detecting the user's Browser and OS</p>
+                    </p>
+                </li>
+            </ol>
+            <img src="../../images/hrline.svg" alt="" class="hr-line">
+            <p class="tutcontent-subheading">Now that you know what is JavaScript, let's learn the
+                ways to execute JavaScript from browser as well as server side</p>
             <hr class="hr-line">
             <div class="exnextbtns">
                 <a href="#" class="previous-page-btn"></a>
@@ -159,7 +217,10 @@
 </body>
 <script>
    const landingpage = document.querySelector(".landingpage"),
-         footer = document.querySelector(".footer");
+         footer = document.querySelector(".footer"),
+         countbtn = document.querySelector(".countme");
+    let btncount = document.querySelector(".count");
+  let count = 0;
    fetch('topaarea.html')
     .then(component => component.text())
     .then(data=>{
@@ -170,7 +231,43 @@
     .then(data=>{
         footer.innerHTML = data
     });
-   
+   function unsuffPass(){
+    let password = document.validform.password.value; 
+    if(password.length<6){
+        alert("Password must be at least 6 characters long.");  
+    }
+   }
+   countbtn.addEventListener("click", () =>{
+            count++;
+            btncount.innerHTML = count;
+   });
+   let emojiblock = document.querySelector(".emojiblock");
+   let emojiContent = ["&#128512;","&#128513;","&#128514;","&#128515;","&#128516;","&#128517;","&#128518;"]
+   let emojiCount= 0;
+   emojiblock.addEventListener("click", () => {
+        emojiCount++;
+        for(let i=0;i<emojiContent.length;i++){
+            if(i == emojiCount){
+                document.getElementById("emojichange").innerHTML = emojiContent[emojiCount];
+            }
+            if(emojiCount>emojiContent.length){
+            emojiCount = -1;
+        }
+        }   
+   });
+   let shapechangeblock = document.querySelector(".shapechangeblock"),
+        shapechange = document.querySelector("i.shapechange");
+    shapechangeblock.onclick = function(){
+        shapechange.classList.toggle("bx-square");
+        if(shapechange.classList.contains("bx-circle")){
+            shapechange.classList.remove("bx-circle");
+            shapechange.classList.add("bx-square");
+        }
+        else{
+            shapechange.classList.remove("bx-square");
+            shapechange.classList.add("bx-circle");
+        }
+    }
 </script>
 <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </html>

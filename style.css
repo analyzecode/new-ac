@@ -100,7 +100,40 @@ i.bx-search {
     border-radius: 11px;
     color: #fff;
 }
-
+ol.big li::marker{
+    font-weight: 700;
+}
+button.btn-design{
+    margin-bottom: 2%;
+    background-color: #0556F3;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 2%;
+}
+form{
+    display: flex;
+}
+input[type=password]{
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    padding: 2%;
+}
+strong{
+    color: #3b3b3b;
+}
+input[type=submit]{
+    border: none;
+    padding: 2%;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+    color: #fff;
+    font-size: inherit;
+    background-color: #256af0;
+}
 .web-banner {
     display: flex;
     justify-content: center;
@@ -152,7 +185,7 @@ a.explore-button:hover {
 font-size: 1.6rem;
     width: fit-content;
     font-weight: 700;
-    color: #121212;
+    color: #3b3b3b;
     padding-bottom: 1%;
     margin-bottom: 3%;
 }
@@ -476,6 +509,7 @@ footer input[type=email]{
 }
 footer input[type=submit]{
     border: none;
+    cursor: pointer;
     padding: 3%;
     border-radius: 0 6px 6px 0;
     color: #fff;
@@ -552,7 +586,7 @@ p.copyright-statement{
     }
     .tutcontent-subheading {
         font-weight: 500;
-        font-size: 1.18rem;
+        font-size: 1.1rem;
     }
     bx-menu{
         display: initial;
@@ -634,6 +668,9 @@ p.copyright-statement{
         height: 27px;
         width: 27px;
         margin: 2%;
+    }
+    span#timedate{
+        display: block;
     }
 
 }
