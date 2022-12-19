@@ -184,13 +184,18 @@
                         <p class="small-heading">Generating HTML Content</p>
                         JavaScript has very handy features to dynamically generate HTML content for the web. It allows us to add text, links, images, tables, etc. or to change html content design after an event occurrence.
                         <p class="tutcontent-description"><strong>For example : </strong></p>
-                        <span class="keyboard-shortcut emojiblock">Click me to change mood <span id="emojichange">&#128512;</span> </span><br>
-                        <span class="keyboard-shortcut shapechangeblock">Click me to change the shape of : <i class='shape-change bx bx-circle'></i></span>
+                       <button class="btn-design emojiblock">Click me to change mood </button>
+                       <span class="keyboard-shortcut" id="emojichange">&#128512;</span> <br>
+                     <button class="btn-design colorshangeblock">Click me to change my background color</button>
                     </p>
                 </li>
                 <li>
                     <p class="tutcontent-description">
                         <p class="small-heading">Detecting the user's Browser and OS</p>
+                        JavaScript is very capable in the detection of the user's browser and OS information. Though JavaScript runs on every platform, there may occur a situation where we need the user's browser before processing. This can be helpful for writing code that results in different outputs in different browsers.
+                        <p class="tutcontent-description"><strong>For example : </strong>Click the button to reveal your browser version information.</p>
+                        <button class="detectos btn-design">Fetch details</button>
+                        <p class="tutcontent-description" id="userBrowseinfo"></p>
                     </p>
                 </li>
             </ol>
@@ -208,8 +213,27 @@
                     <i class='bx bx-md bx bx-right-arrow-alt bx-fade-right-hover' id="arrow-right"></i>
                 </a>
             </div>
-            <div class="vote-article">
-            <p class="tutcontent-subheading">Did you find this article useful?</p>
+            
+            <div class="share-pool-block">
+                <div class="sharePage">
+                    <p>Share this page on :</p>
+                    <div class="icons-block">
+                        <a href=""> <i class='bx bx-sm bxl-facebook'></i></a>
+                        <a href=""> <i class='bx bx-sm bxl-instagram'></i></a>
+                        <a href=""> <i class='bx bx-sm bxl-twitter'></i></a>
+                        <a href=""> <i class='bx bx-sm bxl-linkedin'></i></a>
+                        <a class="whatsappShareBtn" href=""> <i class='bx bx-sm bxl-whatsapp'></i></a>
+                    </div>
+                </div>
+                <div class="UserReactPool">
+                    <p>Did you find this article useful?</p>
+                    <div class="emoji-block">
+                        <button>&#128515;</button>
+                        <button>&#128526;</button>
+                        <button>&#128577;</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <div class="footer"></div>
@@ -255,19 +279,27 @@
         }
         }   
    });
-   let shapechangeblock = document.querySelector(".shapechangeblock"),
-        shapechange = document.querySelector("i.shapechange");
-    shapechangeblock.onclick = function(){
-        shapechange.classList.toggle("bx-square");
-        if(shapechange.classList.contains("bx-circle")){
-            shapechange.classList.remove("bx-circle");
-            shapechange.classList.add("bx-square");
+  let colorChangeBtn = document.querySelector(".colorshangeblock");
+  let colorsList = ["#0556f3","#A555EC","#332FD0","#FF7000","#22A39F","#0014FF","#001253","#FF6464","#54B435"]
+  let colorCount = 0;
+  colorChangeBtn.addEventListener("click", () => {
+    colorCount++;
+    for(let i=0;i<colorsList.length;i++){
+        if(i == colorCount){
+            colorChangeBtn.style.backgroundColor = colorsList[i];
         }
-        else{
-            shapechange.classList.remove("bx-square");
-            shapechange.classList.add("bx-circle");
+        if(colorCount>colorsList.length){
+            colorCount = -1;
         }
     }
+  })
+    let detectos = document.querySelector("button.detectos");
+    detectos.addEventListener("click", () => {
+        document.getElementById("userBrowseinfo").innerHTML = navigator.appVersion;
+    });
+    let whatsappShareBtn = document.querySelector(".whatsappShareBtn");
+    whatsappShareBtn.href = "whatsapp://send?text=" + document.URL;
+    console.log(whatsappShareBtn.href)
 </script>
 <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </html>

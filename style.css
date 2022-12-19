@@ -536,6 +536,68 @@ p.copyright-statement{
     right: -16px;
     top: 243px;
 }
+/* Voting pool */
+
+.share-pool-block{
+    display: flex;
+    margin: 3% 0;
+    padding: 2%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.share-pool-block p{
+    font-weight: 600;
+    line-height: 30px;
+    margin-left: 2%;
+    font-size: 1rem;
+}
+.icons-block{
+    display: flex;
+    align-items: center;
+    margin: 3% 0;
+}
+.icons-block a{
+    margin: 1.5%;
+    display: inline-flex;
+    cursor: pointer;
+    border: 1px solid #0556f3;
+    color: #0556f3;
+    border-radius: 50%;
+    padding: 1%;
+}
+.icons-block a:hover{
+    color: #fff;
+    background-color: #0556f3;
+}
+.UserReactPool, .sharePage{
+    width: 50%;
+}
+.emoji-block{
+    display: flex;
+    width: 40%;
+    margin: 3%;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.emoji-block button{
+    outline: none;
+    border: none;
+    background-color: white;
+    padding: 3%;
+    cursor: pointer;
+    width: 35%;
+    font-size: 1.6rem;
+}
+.emoji-block button:nth-child(1), .emoji-block button:nth-child(2){
+    border-right: 1px solid #ddd;
+}
+.emoji-block button:nth-child(1){
+    border-radius: 6px 0 0 6px;
+}
+.emoji-block button:nth-child(3){
+    border-radius: 0 6px 6px 0;
+}
 @media (max-width: 1140px) {
     nav {
         width: 55%;
@@ -673,9 +735,22 @@ p.copyright-statement{
     span#timedate{
         display: block;
     }
+    .share-pool-block{
+        flex-direction: column;
+    }
+    .icons-block a{
+        margin: 2%;
+    }
+    .UserReactPool, .sharePage{
+        width: 100%;
+    }
 
 }
-
+@media screen and (min-width:580px) {
+    a.whatsappShareBtn{
+        display: none;
+    }
+}
 @media (max-width: 576px) {
     .large-heading {
         width: 80%;
