@@ -120,6 +120,7 @@ input[type=password]{
     border: 1px solid #ccc;
     border-radius: 6px 0 0 6px;
     outline: none;
+    width: 50%;
     padding: 2%;
 }
 strong{
