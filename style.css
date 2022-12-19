@@ -743,7 +743,9 @@ p.copyright-statement{
     .UserReactPool, .sharePage{
         width: 100%;
     }
-
+    .icons-block a i{
+        font-size: 1.4rem;
+    }
 }
 @media screen and (min-width:580px) {
     a.whatsappShareBtn{
