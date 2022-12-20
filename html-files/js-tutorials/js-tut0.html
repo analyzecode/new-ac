@@ -219,9 +219,10 @@
                     <p>Share this page on :</p>
                     <div class="icons-block">
                         <a href=""> <i class='bx bx-sm bxl-facebook'></i></a>
-                        <a href=""> <i class='bx bx-sm bxl-instagram'></i></a>
-                        <a href=""> <i class='bx bx-sm bxl-twitter'></i></a>
+                        <a class="instaSharebtn" href=""> <i class='bx bx-sm bxl-instagram'></i></a>
+                        <a class="tweetBtn" href=""> <i class='bx bx-sm bxl-twitter'></i></a>
                         <a href=""> <i class='bx bx-sm bxl-linkedin'></i></a>
+                        
                         <a class="whatsappShareBtn" href=""> <i class='bx bx-sm bxl-whatsapp'></i></a>
                     </div>
                 </div>
@@ -299,7 +300,11 @@
     });
     let whatsappShareBtn = document.querySelector(".whatsappShareBtn");
     whatsappShareBtn.href = "whatsapp://send?text=" + document.URL;
-    console.log(whatsappShareBtn.href)
+    let instaSharebtn = document.querySelector(".instaSharebtn");
+    instaSharebtn.href = "instagram://send?text=" + document.URL;
+    let tweetBtn = document.querySelector(".tweetBtn");
+    tweetBtn.href= "https://twitter.com/intent/tweet?url=URL_HERE&via=getboldify&text=yourtext";
+    console.log(tweetBtn.href)
 </script>
 <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </html>

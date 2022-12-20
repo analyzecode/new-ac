@@ -541,6 +541,10 @@ p.copyright-statement{
     display: flex;
     margin: 3% 0;
     padding: 2%;
+    background-image: url('images/multi-color-blob-circle.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 60px;
     border: 1px solid #ddd;
     border-radius: 6px;
 }
