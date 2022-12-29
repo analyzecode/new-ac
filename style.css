@@ -104,7 +104,7 @@ ol.big li::marker{
     font-weight: 700;
 }
 button.btn-design{
-    margin-bottom: 2%;
+    margin: 2% 0;
     background-color: #0556F3;
     color: white;
     cursor: pointer;
@@ -331,7 +331,7 @@ margin: 2% 0;
 .tutcontent-subheading {
     font-weight: 500;
     line-height: 30px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #121212;
     margin: 3% 0;
 }
@@ -396,9 +396,6 @@ margin: 2% 0;
         text-decoration: none;
         font-weight: 500;
     }
-    .tut-content-sidebar a:visited{
-        color: #0556f3;
-    }
     .exnextbtns {
         display: flex;
         justify-content: space-between;
@@ -407,7 +404,7 @@ margin: 2% 0;
         background: #0556f3;
         color: white;
         padding: 2%;
-        width: 25%;
+        width: 28%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -415,10 +412,26 @@ margin: 2% 0;
     }
     .previous-page-btn{
         background: #f9fafe;
+        padding: 2%;
+        width: 28%;
+        display: flex;
+        align-items: center;
+        justify-content: space;
+    }
+    .previous-page-btn .nextpage-topic{
+        font-weight: 700;
+        color: #0556F3;
     }
     .pagination-turnover {
         width: 60%;
         font-weight: 500;
+    }
+    .previous-page-btn .pagination-turnover{
+        width: 100%;
+    }
+    .previous-page-btn .pagination-text{
+        color: #0556F3;
+        font-weight: 600;
     }
     .pagination-text {
         color: rgba(255, 255, 255, .8);
@@ -650,10 +663,7 @@ p.copyright-statement{
     .logo-text{
         margin-left: 0;
     }
-    .tutcontent-subheading {
-        font-weight: 500;
-        font-size: 1.1rem;
-    }
+
     bx-menu{
         display: initial;
         font-size: 1.55rem!important;
@@ -664,9 +674,9 @@ p.copyright-statement{
         left: 337px;
         top: 503px;
     }
-    .next-page-btn{
+    .next-page-btn, .previous-page-btn{
         padding: 3%;
-        width: 42%;
+        width: 37%;
         }
         footer{
         flex-direction: column;
@@ -700,7 +710,6 @@ p.copyright-statement{
             padding: 2% 4%;
         }
 }
-
 @media (max-width: 768px) {
 
     nav {
