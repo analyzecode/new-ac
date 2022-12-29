@@ -342,13 +342,14 @@ margin: 2% 0;
 .keyboard-shortcut {
     border: 1px solid #ddd;
     padding: 1%;
+    display: inline-block;
     margin: 0 1%;
     border-radius: 4px;
 }
 .tutcontent-description {
     margin: 3% 0;
     line-height: 30px;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .tut-content-sidebar summary{
     list-style: none;
