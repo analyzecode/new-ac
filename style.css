@@ -777,8 +777,6 @@ p.copyright-statement{
         font-size: 2rem!important;
     }
 }
-@media screen and (min-width:580px) {
-}
 @media (max-width: 576px) {
     .large-heading {
         width: 80%;
