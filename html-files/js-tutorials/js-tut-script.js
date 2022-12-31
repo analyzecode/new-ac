@@ -1,8 +1,8 @@
 
    const landingpage = document.querySelector(".landingpage"),
    footer = document.querySelector(".footer"),
-   sidebar = document.querySelector(".tut-content-sidebar"),
-   sharePool = document.querySelector(".share-pool-block"),
+  //  sidebar = document.querySelector(".tut-content-sidebar"),
+  //  sharePool = document.querySelector(".share-pool-block"),
    countbtn = document.querySelector(".countme");
 let btncount = document.querySelector(".count");
 let count = 0;
@@ -11,21 +11,21 @@ fetch('topaarea.html')
 .then(data=>{
   landingpage.innerHTML =data
 });
-fetch('sharePool.html')
-.then(component => component.text())
-.then(data=>{
-  sharePool.innerHTML = data
-});
+// fetch('sharePool.html')
+// .then(component => component.text())
+// .then(data=>{
+//   sharePool.innerHTML = data
+// });
 fetch('footer.html')
 .then(component => component.text())
 .then(data=>{
   footer.innerHTML = data
 });
-fetch('sidebar.html')
-.then(component => component.text())
-.then(data=>{
-  sidebar.innerHTML=data
-})
+// fetch('sidebar.html')
+// .then(component => component.text())
+// .then(data=>{
+//   sidebar.innerHTML=data
+// })
 function unsuffPass(){
 let password = document.validform.password.value; 
 if(password.length<6){
@@ -67,22 +67,4 @@ for(let i=0;i<colorsList.length;i++){
 let detectos = document.querySelector("button.detectos");
 detectos.addEventListener("click", () => {
   document.getElementById("userBrowseinfo").innerHTML = navigator.appVersion;
-});
-let whatsappShareBtn = document.querySelector(".whatsappShareBtn");
-whatsappShareBtn.href = "whatsapp://send?text=" + document.URL;
-let tweetBtn = document.querySelector(".tweetBtn");
-tweetBtn.href= "https://twitter.com/intent/tweet?url="+document.URL;
-let faceBookBtn = document.querySelector(".faceBookBtn");
-faceBookBtn.href = "http://www.facebook.com/share.php?u="+document.URL;
-let linkdInBtn = document.querySelector(".linkdInBtn");
-linkdInBtn.href = "https://www.linkedin.com/sharing/share-offsite/?url="+document.URL;
-
-// js code to set auto active state to side btn [class = class="tutitemactive"]
-let jstutList = document.getElementsByClassName("sidebar-href");
-window.addEventListener("load",() => {
-for (let i = 0; i < jstutList.length; i++) {
- if(jstutList[i].href == document.URL){
-      jstutList[i].classList.add("tutitemactive");
- }
-}
 });
