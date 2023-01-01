@@ -616,6 +616,12 @@ p.copyright-statement{
     width: 35%;
     font-size: 1.6rem;
 }
+.tut-content-sidebar a:visited i{
+    color: #0556F3;
+}
+.emoji-block button:hover{
+    background-color:#f3f3f3;
+}
 .emoji-block button:nth-child(1), .emoji-block button:nth-child(2){
     border-right: 1px solid #ddd;
 }
@@ -871,3 +877,21 @@ p.copyright-statement{
         
 }
 
+ /* code editor */
+ .codeEdit-header{
+    height: 15vh;
+ }
+ .codeEdit-block{
+    display: flex;
+    width: 100%;
+    align-items: center;
+ }
+ .codeEditor{
+    padding: 2% 1%;
+    height: 85%;
+    line-height: 37px;
+    width: 50%;
+    outline: none;
+    border: none;
+    overflow-y: scroll;
+ }

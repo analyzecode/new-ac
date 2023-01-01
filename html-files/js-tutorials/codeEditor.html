@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <section class="top-area codeEdit-header">
     <header class="codeOptions">
         <a href="../../index.html">
             <div class="logo">
@@ -27,7 +28,19 @@
             <a href="" class="runCode"></a>
         </nav>
     </header>
-
+</section>
+<div class="codeEdit-block">
+    <div class="codeEditor"  spellcheck="false" contenteditable></div>
+    <iframe src="" frameborder="0" class="CodeOutput"></iframe>
+</div>
 </body>
 <script src="../../script.js"></script>
+<script>
+    let codeeditor = document.querySelector(".codeEditor");
+    fetch('js-tut0.html')
+    .then(component => component.text())
+.then(data=>{
+  codeeditor.innerText = data
+});
+</script>
 </html>
