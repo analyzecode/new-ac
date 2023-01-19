@@ -883,15 +883,65 @@ p.copyright-statement{
  }
  .codeEdit-block{
     display: flex;
-    width: 100%;
+    height: 85vh ;
+    width: 96%;
+    margin: 0 2%;
     align-items: center;
  }
  .codeEditor{
-    padding: 2% 1%;
-    height: 85%;
-    line-height: 37px;
-    width: 50%;
+   width: 50%;
+   height: 100%;
+   min-width: 20%;
+   resize: horizontal;
+   padding: 0.5%;
+   line-height: 36px;
+    background: #fff;
+    color: #121212;
     outline: none;
-    border: none;
-    overflow-y: scroll;
+   overflow-y: scroll;
+   border-right: 1px solid rgb(239, 237, 237);
  }
+ iframe.CodeOutput{
+    width:50%;
+    min-height: 100%;
+    max-width: 80%;
+   overflow-y: scroll;
+
+    background: #fff;
+
+ }
+ body.codeEditorBody{
+    height: 100vh;
+    overflow: hidden;
+    background: #faf5f0;
+
+ }
+ .codeOptions nav{
+    width: 80%;
+    align-items: center;
+    justify-content: flex-end;
+ }
+ .codeOptions nav button{
+    margin: 0 2%;
+    width: 15%;
+    color: #4b4b4b;
+    background: none;
+    padding: 0.5%;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+ }
+ .codeOptions nav button:hover{
+    color: #0556f3;
+ }
+ .codeOptions nav button i{
+    margin-right: 2%;
+ }
+ .codeOptions nav button.runCode{
+    color: #0556F3;
+}
