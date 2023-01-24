@@ -93,13 +93,28 @@
     
 
     // for mobile navigation buttons->
+    let viewCodeBtn = document.querySelector(".viewCode"),
+        viewOutputBtn = document.querySelector(".viewOutput");
     function viewCode(){
       document.querySelector(".codeEdit-block").style.width = "100%";
       codeOutput.style.width = "0"
+      viewCodeBtn.style.backgroundColor="#0556f3";
+      viewCodeBtn.style.color = "#fff"
+      viewCodeBtn.style.borderColor="#0556f3"
+      viewOutputBtn.style.backgroundColor="#fbfbfb";
+      viewOutputBtn.style.color = "#25265e"
+      viewOutputBtn.style.borderColor="#D3DCE6"
+
     }
     function viewOutput(){
       document.querySelector(".codeEdit-block").style.width = "0";
       codeOutput.style.width="100%";
+      viewOutputBtn.style.backgroundColor="#0556f3";
+      viewOutputBtn.style.color = "#fff"
+      viewOutputBtn.style.borderColor="#0556f3"
+      viewCodeBtn.style.backgroundColor="#fbfbfb";
+      viewCodeBtn.style.color = "#25265e"
+      viewCodeBtn.style.borderColor="#D3DCE6"
     }
    
   </script>

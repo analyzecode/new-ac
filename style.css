@@ -929,6 +929,9 @@ p.copyright-statement{
     }
     .mobile-toggle-Window button.viewCode{
         border-radius: 6px 0 0 6px;
+        color: #fff;
+        background-color: #0556F3;
+        border-color: #0556F3;
     }
     .mobile-toggle-Window button.viewOutput{
         border-radius: 0 6px 6px 0;
