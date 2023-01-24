@@ -66,6 +66,7 @@
             Codeeditor.addEventListener('keyup',() => {
               let htmCode = Codeeditor.textContent;
               codeOutput.src = "data:text/html;charset=utf-8," + encodeURI(htmCode);
+    document.querySelectorAll("[contenteditable div").style.textAlign = "left";
             })
             let saveCode = document.querySelector(".downloadCode")
             function download(file, text) {
