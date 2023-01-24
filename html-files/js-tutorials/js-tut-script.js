@@ -68,3 +68,4 @@ let detectos = document.querySelector("button.detectos");
 detectos.addEventListener("click", () => {
   document.getElementById("userBrowseinfo").innerHTML = navigator.appVersion;
 });
+

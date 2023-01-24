@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
-
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c8cbcf; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b6b7b8; 
+  }
 * {
     margin: 0;
     padding: 0;
@@ -134,7 +151,7 @@ input[type=password]{
     border: 1px solid #ccc;
     border-radius: 6px 0 0 6px;
     outline: none;
-    width: 50%;
+    width: 25ch;
     padding: 2%;
 }
 strong{
@@ -142,11 +159,11 @@ strong{
 }
 input[type=submit]{
     border: none;
-    padding: 2%;
+    padding: 1%;
+    font-size: 0.9rem;
     cursor: pointer;
     border-radius: 0 6px 6px 0;
     color: #fff;
-    font-size: inherit;
     background-color: #256af0;
 }
 .web-banner {
@@ -179,9 +196,34 @@ a.explore-button {
     margin: 3% 2%;
     border-radius: 17px;
 }
-
+a.home-course-button{
+    color: #3577F8;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
 a.explore-button:hover {
     background: #4a84f7;
+}
+.course-heading{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #25265E;
+}
+.course-option-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 7%;
+}
+.course-option-container .text{
+    width: 75%;
+}
+.course-option-container:nth-child(even) .text{
+    margin-left: 4%;
+    width: 80%;
 }
 
 .large-heading {
@@ -192,18 +234,17 @@ a.explore-button:hover {
 }
 .medium-heading{
     font-weight: 700;
-    color: #3b3b3b;
+    color: #25265e;
     font-size: 2.3rem;
     margin: 2% 0;
 }
 .medium-heading.homepage{
-    color: #25265E;
     text-align: center;
 }
 .small-heading{
 font-size: 1.6rem;
     font-weight: 700;
-    color: #3b3b3b;
+    color: #25265e;
     padding-bottom: 1%;
     margin-bottom: 3%;
 }
@@ -251,7 +292,6 @@ a.arrow-down-home {
     background-blend-mode: normal;
     border-radius: 41px;
     padding: 0.6% 0.7%;
-
 }
 .tutorial-banner-top{
     display: flex;
@@ -297,8 +337,12 @@ margin: 2% 0;
 .tutorial-banner-text .sub-nav a i{
     margin: 0 1%;
 }
-
-
+.courses-list-container{
+    margin-bottom: 5%;
+}
+.course-list-container{
+    margin: 2% 0;
+}
 .course-sub-title {
     color: #3d3d3d;
     font-weight: 500;
@@ -345,7 +389,7 @@ margin: 2% 0;
     font-weight: 500;
     line-height: 30px;
     font-size: 1.3rem;
-    color: #121212;
+    color: #25265E;
     margin: 3% 0;
 }
 .gotoup{
@@ -365,6 +409,7 @@ margin: 2% 0;
 .keyboard-shortcut {
     border: 1px solid #ddd;
     padding: 1%;
+    color: #25265e;
     display: inline-block;
     margin: 0 1%;
     border-radius: 4px;
@@ -372,7 +417,13 @@ margin: 2% 0;
 .tutcontent-description {
     margin: 3% 0;
     line-height: 30px;
+    color: #25265e;
     font-size: 1.2rem;
+}
+.tutcontent-description-home{
+    font-weight: 500;
+    color: #25265e;
+    margin-bottom: 2%;
 }
 .tut-content-sidebar summary{
     list-style: none;
@@ -402,11 +453,19 @@ margin: 2% 0;
         border: none;
         height: 1px;
     }
+    .hr-line-home{
+        margin: 3% auto;
+        background: #d3dce6;
+        border: none;
+        width: 82%;
+        height: 1px;
+    }
     .tut-content-show-content{
         width: 80%;
     }
     .tut-content-show-content li{
         margin-left: 3%;
+        color: #25265E;
         line-height: 31px;
         font-size: 1.17rem;
     }
@@ -591,6 +650,10 @@ p.copyright-statement{
     margin-left: 2%;
     font-size: 1rem;
 }
+.codeEdit-top .mobile-toggle-Window{
+    display: none;
+}
+
 .icons-block{
     display: flex;
     align-items: center;
@@ -643,6 +706,92 @@ p.copyright-statement{
 }
 .emoji-block button:nth-child(3){
     border-radius: 0 6px 6px 0;
+}
+/* code editor */
+
+.codeEdit-top{
+    border-bottom: 1px solid #D3DCE6;
+ }
+.codeEdit-top a{
+   color: #25265E;
+   font-weight: 600;
+   width: 100%;
+
+   text-decoration: none;
+}
+.codeOptions{
+    display: flex;
+    align-items: center;
+    padding: 1% 2%;
+    border-bottom: 1px solid #D3DCE6;
+
+}
+.codeOptions p.tutcontent-subheading{
+    margin: 0;
+    font-size: 1rem;
+    width: 70%;
+}
+.codeOptions .download-btn{
+    width: 30%;
+    display: flex;
+    justify-content: right;
+}
+.codeOptions .download-btn button{
+    background: #ECF2FF;
+    border: 1px solid #7FAAFF;
+    border-radius: 6px;
+    color: #0556F4;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    font-weight: 600;
+    width: 50%;
+}
+.codeOptions .download-btn button i{
+    margin-right: 2%;
+}
+.editor-container{
+    display: flex;
+    width: 100%;
+    height: 81vh;
+ }
+.codeEdit-block{
+    display: flex;
+    min-height: 100%;
+    width: 50%;
+    overflow-y: scroll;
+
+ }
+ .codeEditor{
+    /* height: 100%; */
+    min-width: 95%;
+    padding: 0.5% 2%;
+    line-height: 36px;
+     background: #FBFBFB;
+     color: #121212;
+     outline: none;
+    /* border-left: 1px solid rgb(239, 237, 237); */
+  }
+  .lines{
+    width:5%;
+    border-right: 1px solid #D3DCE6 ;
+  }
+  [contenteditable] div{
+    background: #FBFBFB;
+     color: #121212;
+    /* border-left: 1px solid rgb(239, 237, 237); */
+  }
+  iframe.codeOutput{
+    width: 50%;
+    overflow-y: scroll;
+
+  }
+
+.codeEditorBody{
+    height: 100%;
+    overflow: hidden;
 }
 @media (max-width: 1140px) {
     nav {
@@ -750,7 +899,53 @@ p.copyright-statement{
     nav {
         width: 60%;
     }
-
+    .codeOptions{
+        flex-direction: column;
+        padding: 3%;
+    }
+    .codeEdit-block{
+        width: 100%;
+    }
+    .editor-container{
+        min-height: 85vh;
+    }
+    iframe.codeOutput{
+        width: 0;
+    }
+    .codeEdit-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-toggle-Window button{
+        outline: none;
+        border: 1px solid #D3DCE6;
+        background-color: #FBFBFB;
+        padding: 4%;
+        border-radius: 6px;
+        font-weight: 500;
+        margin: 6% 0;
+        color: #25265e;
+    }
+    .mobile-toggle-Window button.viewCode{
+        border-radius: 6px 0 0 6px;
+    }
+    .mobile-toggle-Window button.viewOutput{
+        border-radius: 0 6px 6px 0;
+    }
+    .codeOptions .download-btn{
+        width: 40%;
+    }
+    .codeOptions .download-btn button{
+       width: 100%;
+       padding: 4%;
+    }
+    .codeEdit-top .mobile-toggle-Window{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .logo {
         width: 30%;
     }
@@ -890,73 +1085,4 @@ p.copyright-statement{
             margin-left: 16%;
         }	
         
-}
-
- /* code editor */
- .codeEdit-header{
-    height: 15vh;
- }
- .codeEdit-block{
-    display: flex;
-    height: 85vh ;
-    width: 96%;
-    margin: 0 2%;
-    align-items: center;
- }
- .codeEditor{
-   width: 50%;
-   height: 100%;
-   min-width: 20%;
-   resize: horizontal;
-   padding: 0.5%;
-   line-height: 36px;
-    background: #fff;
-    color: #121212;
-    outline: none;
-   overflow-y: scroll;
-   border-right: 1px solid rgb(239, 237, 237);
- }
- iframe.CodeOutput{
-    width:50%;
-    min-height: 100%;
-    max-width: 80%;
-   overflow-y: scroll;
-
-    background: #fff;
-
- }
- body.codeEditorBody{
-    height: 100vh;
-    overflow: hidden;
-    background: #faf5f0;
-
- }
- .codeOptions nav{
-    width: 80%;
-    align-items: center;
-    justify-content: flex-end;
- }
- .codeOptions nav button{
-    margin: 0 2%;
-    width: 15%;
-    color: #4b4b4b;
-    background: none;
-    padding: 0.5%;
-    font-size: 1.1rem;
-    border: none;
-    outline: none;
-    font-weight: 600;
-    cursor: pointer;
-    justify-content: center;
-    display: flex;
-    align-items: center;
- }
- .codeOptions nav button:hover{
-    color: #0556f3;
- }
- .codeOptions nav button i{
-    margin-right: 2%;
- }
- .codeOptions nav button.runCode{
-    color: #0556F3;
 }

@@ -1,95 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analyze Code | Code Editor</title>
-    <meta name="keywords" content="javascript editor, html, css">
+    <meta name="keywords" content="javascript editor, html, css" />
 
-    <meta name="description" content="Free online code editor for html css javascript">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="icon" href="../../images/site-logo.svg" type="image/x-icon">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <meta
+      name="description"
+      content="Free online code editor for html css javascript"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" href="../../images/site-logo.svg" type="image/x-icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="codeEditorBody">
-    <section class="top-area codeEdit-header">
-    <header class="codeOptions">
-        <a href="../../index.html">
-            <div class="logo">
-                <img src="../../images/site-logo.svg" alt="">
-                <span class="logo-text">Analyze Code</span>
-            </div> 
-        </a>
-        <nav>
-            
-            <button class="changeOrientation"><i class='bx bx-sm bxs-devices' ></i>Orientation</button>
-            <button class="saveCode"><i class='bx bx-sm bxs-download' ></i>Download</button>
-            <button class="runCode"><i class='bx  bx-md bx-play'></i>Run Code</button>
-        </nav>
-    </header>
-</section>
-<div class="codeEdit-block">
-    <div class="codeEditor"  spellcheck="false" contenteditable></div>
-    <iframe frameborder="0" class="CodeOutput"></iframe>
-</div>
-</body>
-<script src="../../script.js"></script>
-<script>
+  <body class="codeEditorBody">
+    <section class="codeEdit-top">
+      <a href="../../index.html">
+        <div class="logo">
+          <img src="../../images/site-logo.svg" alt="" />
+          <span class="logo-text">Analyze Code</span>
+        </div>
+      </a>
+      <div class="mobile-toggle-Window">
+        <button class="viewCode" onclick="viewCode()">Code</button>
+        <button class="viewOutput" onclick="viewOutput()">Output</button>
+      </div>
+    </section>
+    <section class="codeOptions">
+      <p class="tutcontent-subheading">
+        Html , CSS and JavaScript Online Live Editor
+      </p>
+      <div class="download-btn">
+        <button id="saveCode">
+          <i class="bx bx-sm bx-download"></i>Download Code
+        </button>
+      </div>
+    </section>
+    <div class="editor-container">
+      <div class="codeEdit-block">
+        <!-- <div class="codeEditor" contenteditable spellcheck="false"><div class="lines"></div></div> -->
+        <div class="lines"></div>
+        <div class="codeEditor" contenteditable spellcheck="false"></div>
+      </div>
+      <iframe src="" frameborder="0" class="codeOutput"></iframe>
+    </div>
+  </body>
+  <script src="../../script.js"></script>
+  <script>
+  // js code to stop overwriting the style in editor area from external source
+  let ce = document.querySelector('[contenteditable]')
+  ce.addEventListener('paste', function (e) {
+    e.preventDefault()
+    var text = e.clipboardData.getData('text/plain')
+    document.execCommand('insertText', false, text)
+  })
+          let Codeeditor = document.querySelector(".codeEditor"),
+              codeOutput = document.querySelector("iframe.codeOutput");
+  
+            Codeeditor.addEventListener('keyup',() => {
+              let htmCode = Codeeditor.textContent;
+              codeOutput.src = "data:text/html;charset=utf-8," + encodeURI(htmCode);
+            })
+            let saveCode = document.querySelector(".downloadCode")
+            function download(file, text) {
+			
+      //creating an invisible element
+      var element = document.createElement('a');
+      element.setAttribute('href',
+      'data:text/html;charset=utf-8, '
+      + encodeURIComponent(text));
+      element.setAttribute('download', file);
+      document.body.appendChild(element);
+      //onClick property
+      element.click();
+      document.body.removeChild(element);
+    }
+    
+    // Start file download.
+    document.getElementById("saveCode")
+    .addEventListener("click", function() {
+      var text = Codeeditor.textContent;
+      var filename = "saveCode.html";
+    
+      download(filename, text);
+    }, false);
+    
 
-    let codeeditor = document.querySelector(".codeEditor"),
-        codeOutput = document.querySelector("iframe.CodeOutput"),
-        runCode = document.querySelector(".runCode");
-// try it editor code
-fetch('footer.html')
-    .then(component => component.text())
-.then(data=>{
-  codeeditor.innerText = data
-});
-// for run button
-runCode.addEventListener('click', () => {
-  var html = codeeditor.textContent;
-  codeOutput.src = "data:text/html;charset=utf-8," + encodeURI(html);
-});
-
-
-// editor.addEventListener('keyup',()=>{
-//   var html = editor.textContent;
-//   iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-// });
-
-// editor.addEventListener("paste", function(e) {
-//         e.preventDefault();
-//         var text = e.clipboardData.getData("text/plain");
-//         document.execCommand("insertText", false, text);
-// });
-
-
-
-
-
-
-
-// btn.addEventListener("click", () => {
-//   var html = editor.textContent;
-//   iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-// });
-
-
-// editor.addEventListener("keyup",()=>{
-//   var html = editor.textContent;
-//   iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-// })
-
-// codeeditor.addEventListener("paste", function(e) {
-//         e.preventDefault();
-//         var text = e.clipboardData.getData("text/plain");
-//         document.execCommand("insertText", false, text);
-//     });
-
-// </script>
-
+    // for mobile navigation buttons->
+    function viewCode(){
+      document.querySelector(".codeEdit-block").style.width = "100%";
+      codeOutput.style.width = "0"
+    }
+    function viewOutput(){
+      document.querySelector(".codeEdit-block").style.width = "0";
+      codeOutput.style.width="100%";
+    }
+   
+  </script>
+  <script src="js-tut-script.js"></script>
 </html>
