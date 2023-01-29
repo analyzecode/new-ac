@@ -36,24 +36,10 @@ countbtn.addEventListener("click", () =>{
       count++;
       btncount.innerHTML = count;
 });
-let emojiblock = document.querySelector(".emojiblock");
-let emojiContent = ["&#128512;","&#128513;","&#128514;","&#128515;","&#128516;","&#128517;","&#128518;"]
-let emojiCount= 0;
-emojiblock.addEventListener("click", () => {
-  emojiCount++;
-  for(let i=0;i<emojiContent.length;i++){
-      if(i == emojiCount){
-          document.getElementById("emojichange").innerHTML = emojiContent[emojiCount];
-      }
-      if(emojiCount>emojiContent.length){
-      emojiCount = -1;
-  }
-  }   
-});
-let colorChangeBtn = document.querySelector(".colorshangeblock");
-let colorsList = ["#0556f3","#A555EC","#332FD0","#FF7000","#22A39F","#0014FF","#001253","#FF6464","#54B435"]
+let colorChangeBtn = document.querySelector("#colorsChangeblock");
+let colorsList = ["#A555EC","#ffb013","#0556f3","#332FD0","#FF7000","#22A39F","#0014FF","#001253","#FF6464","#54B435"]
 let colorCount = 0;
-colorChangeBtn.addEventListener("click", () => {
+colorChangeBtn.onclick= () => {
 colorCount++;
 for(let i=0;i<colorsList.length;i++){
   if(i == colorCount){
@@ -63,9 +49,5 @@ for(let i=0;i<colorsList.length;i++){
       colorCount = -1;
   }
 }
-})
-let detectos = document.querySelector("button.detectos");
-detectos.addEventListener("click", () => {
-  document.getElementById("userBrowseinfo").innerHTML = navigator.appVersion;
-});
+}
 

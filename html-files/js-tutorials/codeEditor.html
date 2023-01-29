@@ -46,7 +46,8 @@
       <div class="codeEdit-block">
         <!-- <div class="codeEditor" contenteditable spellcheck="false"><div class="lines"></div></div> -->
         <div class="lines"></div>
-        <div class="codeEditor" contenteditable spellcheck="false"></div>
+        <div class="codeEditor" contenteditable spellcheck="false">
+            </div>
       </div>
       <iframe src="" frameborder="0" class="codeOutput"></iframe>
     </div>
@@ -62,7 +63,6 @@
   })
           let Codeeditor = document.querySelector(".codeEditor"),
               codeOutput = document.querySelector("iframe.codeOutput");
-  
             Codeeditor.addEventListener('keyup',() => {
               let htmCode = Codeeditor.textContent;
               codeOutput.src = "data:text/html;charset=utf-8," + encodeURI(htmCode);

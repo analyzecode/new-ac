@@ -136,13 +136,19 @@ ol.big li::marker{
 }
 button.btn-design{
     margin: 2% 0;
-    background-color: #0556F3;
+    background-color: #A555EC;
     color: white;
     cursor: pointer;
     border: none;
     outline: none;
-    border-radius: 6px;
+    border-radius: 4px;
+    box-shadow: 0 12px 18px rgba(0,0,0,0.05);
     padding: 2%;
+}
+button.detectos.btn-design{
+    background-color: #0556F3;
+    color: #fff;
+    font-weight: 600;
 }
 form{
     display: flex;
@@ -499,7 +505,7 @@ margin: 2% 0;
         display: flex;
         justify-content: space-between;
     }
-    .next-page-btn {
+    /* .next-page-btn {
         background: #0556f3;
         color: white;
         padding: 2%;
@@ -516,8 +522,8 @@ margin: 2% 0;
         display: flex;
         align-items: center;
         justify-content: space;
-    }
-    .previous-page-btn .nextpage-topic{
+    } */
+    /* .previous-page-btn .nextpage-topic{
         font-weight: 700;
         color: #0556F3;
     }
@@ -541,6 +547,33 @@ margin: 2% 0;
     }
     .next-page-btn i{
         color: white;
+    } */
+    .next-page-btn, .previous-page-btn{
+        display: flex;
+        width: 40%;
+        align-items: center;
+        border: 1px solid #d3dce6;
+        border-radius: 10px;
+        padding: 2%;
+    }
+    .previous-page-btn .pagination-turnover{
+        text-align: right;
+        margin-right: 0;
+        width: 100%;
+    }
+    .pagination-turnover{
+        width: 80%;
+        margin-right: 2%;
+    }
+    .pagination-text{
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 1%;
+    }
+    .nextpage-topic{
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #3b3b3b;
     }
     details summary i{
         transition: rotate 0.5s ease;
@@ -649,7 +682,7 @@ p.copyright-statement{
 }
 /* Voting pool */
 
-.share-pool-block{
+/* .share-pool-block{
     display: flex;
     margin: 3% 0;
     padding: 2%;
@@ -707,10 +740,25 @@ p.copyright-statement{
     cursor: pointer;
     width: 35%;
     font-size: 1.6rem;
+}*/
+.social-share{
+    display: flex;
+    align-items: center;
+    margin: 2% 0;
 }
-.tut-content-sidebar a:visited i{
+.social-share a{
+    margin-right: 1%;
+}
+.social-share a img{
+    width: 40px;
+    height: 40px;
+}
+.UserReactPool, .sharePage{
+    width: 100%;
+}
+ .tut-content-sidebar a:visited i{
     color: #0556F3;
-}
+} 
 .emoji-block button:hover{
     background-color:#f3f3f3;
 }
@@ -722,7 +770,7 @@ p.copyright-statement{
 }
 .emoji-block button:nth-child(3){
     border-radius: 0 6px 6px 0;
-}
+} */
 /* code editor */
 
 .codeEdit-top{
@@ -1009,18 +1057,6 @@ p.copyright-statement{
     }
     span#timedate{
         display: block;
-    }
-    .share-pool-block{
-        flex-direction: column;
-    }
-    .icons-block a{
-        margin: 2%;
-    }
-    .UserReactPool, .sharePage{
-        width: 100%;
-    }
-    .icons-block a i{
-        font-size: 2rem!important;
     }
 }
 @media (max-width: 576px) {
