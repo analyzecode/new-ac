@@ -29,9 +29,11 @@
     <section class="codeOptions">
       <p class="tutcontent-subheading">
         Html , CSS and JavaScript Online Live Editor
+        
       </p>
-      <div class="download-btn">
-        <button id="saveCode">
+        <div class="download-btn">
+          <button class="rcode" onclick="rcode()"><i class='bx bx-sm bx-play'></i> Run code</button>
+          <button id="saveCode">
           <i class="bx bx-sm bx-download"></i>Download Code
         </button>
       </div>
@@ -64,11 +66,16 @@
   Codeeditor.innerText =data;
   codeOutput.src = "codestxt/p1.html";
 });
-          
-            Codeeditor.addEventListener('keyup',() => {
-              let htmCode = Codeeditor.textContent;
+function rcode(){
+                let htmCode = Codeeditor.textContent;
+              alert("success")
+              console.log(htmCode)
               codeOutput.src = "data:text/html;charset=utf-8," + encodeURI(htmCode);
-            })
+              }
+            // Codeeditor.addEventListener('keyup',() => {
+            //   let htmCode = Codeeditor.textContent;
+            //   codeOutput.src = "data:text/html;charset=utf-8," + encodeURI(htmCode);
+            // })
             let saveCode = document.querySelector(".downloadCode")
             function download(file, text) {
 			

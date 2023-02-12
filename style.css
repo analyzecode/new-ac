@@ -804,14 +804,36 @@ p.copyright-statement{
 .codeOptions p.tutcontent-subheading{
     margin: 0;
     font-size: 1rem;
-    width: 70%;
+    width: 60%;
 }
 .codeOptions .download-btn{
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: right;
 }
-.codeOptions .download-btn button{
+/* .rcode-cont{
+    width: 10%;
+    justify-content: right;
+display: flex;
+background-color: red;
+align-items: center;
+} */
+.download-btn button.rcode{
+    background: #0556F3;
+    display: flex;
+    color: #fff;
+    width: 40%;
+    text-align: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    padding: 2%;
+    margin-right: 2%;
+    justify-content: center;
+}
+ .download-btn button{
     background: #ECF2FF;
     border: 1px solid #7FAAFF;
     border-radius: 6px;
@@ -1033,12 +1055,14 @@ p.copyright-statement{
     .mobile-toggle-Window button.viewOutput{
         border-radius: 0 6px 6px 0;
     }
-    .codeOptions .download-btn{
-        width: 40%;
+    
+    .codeOptions .download-btn {
+        width: 100%;
+        padding: 3%;
     }
     .codeOptions .download-btn button{
        width: 100%;
-       padding: 4%;
+       padding: 2%;
     }
     .codeEdit-top .mobile-toggle-Window{
         width: 50%;

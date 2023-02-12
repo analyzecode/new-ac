@@ -62,8 +62,10 @@
   })
           let Codeeditor = document.querySelector(".codeEditor"),
               codeOutput = document.querySelector("iframe.codeOutput");
+              
             Codeeditor.addEventListener('keyup',() => {
               let htmCode = Codeeditor.textContent;
+              alert("success")
               codeOutput.src = "data:text/html;charset=utf-8," + encodeURI(htmCode);
     document.querySelectorAll("[contenteditable div").style.textAlign = "left";
             })
