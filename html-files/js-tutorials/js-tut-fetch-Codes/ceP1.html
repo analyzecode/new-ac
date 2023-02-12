@@ -2,28 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="../../../images/site-logo.svg" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analyze Code | Code Editor</title>
     <meta name="keywords" content="javascript editor, html, css" />
-
-    <meta
-      name="description"
-      content="Free online code editor for html css javascript"
-    />
-    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../../style.css">
+    <meta name="description" content="Free online code editor for html css javascript"    />
     <link rel="icon" href="../../images/site-logo.svg" type="image/x-icon" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"   />
   </head>
 
   <body class="codeEditorBody">
     <section class="codeEdit-top">
-      <a href="../../index.html">
+      <a href="../../../index.html">
         <div class="logo">
-          <img src="../../images/site-logo.svg" alt="" />
+          <img src="../../../images/site-logo.svg" alt="" />
           <span class="logo-text">Analyze Code</span>
         </div>
       </a>
@@ -49,7 +43,7 @@
         <div class="codeEditor" contenteditable spellcheck="false">
             </div>
       </div>
-      <iframe src="" frameborder="0" class="codeOutput"></iframe>
+      <div class="codeOutput"></div> 
     </div>
   </body>
   <script>
@@ -60,12 +54,19 @@
     var text = e.clipboardData.getData('text/plain')
     document.execCommand('insertText', false, text)
   })
-          let Codeeditor = document.querySelector(".codeEditor"),
-              codeOutput = document.querySelector("iframe.codeOutput");
+  let Codeeditor = document.querySelector(".codeEditor"),
+              codeOutput = document.querySelector(".codeOutput");
+  fetch('codestxt/p1.html')
+.then(component => component.text())
+.then(data=>{
+   
+  Codeeditor.innerText =data;
+  codeOutput.innerHTML = data;
+});
+          
             Codeeditor.addEventListener('keyup',() => {
               let htmCode = Codeeditor.textContent;
-              codeOutput.src = "data:text/html;charset=utf-8," + encodeURI(htmCode);
-    document.querySelectorAll("[contenteditable div").style.textAlign = "left";
+              codeOutput.innerHTML = Codeeditor.innerText;
             })
             let saveCode = document.querySelector(".downloadCode")
             function download(file, text) {
@@ -116,16 +117,57 @@
       viewCodeBtn.style.color = "#25265e"
       viewCodeBtn.style.borderColor="#D3DCE6"
     }
-    
+   
     // Codeeditor.innerText = "<font color='red'>hello</font>"
-    function jstut0c1fun(){
-Codeeditor.innerText = "helloo"
-
-// fetch('js-tut-fetch-Codes/p1.txt')
-// .then(res => res.text())
-// .then(data=>{
-// Codeeditor.innerText = data
-// });
-}
+  
   </script>
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password validation</title>
+<style>
+body{
+margin: 20px;
+}
+form{
+display: flex;
+}
+input[type="submit"]{
+border: 1px solid #ccc;
+border-radius: 6px 0 0 6px;
+outline: none;
+width: 25ch;
+padding: 2%;
+}
+input[type="submit"]{
+border: none;
+font-size: 1rem;
+padding: 1%;
+cursor: pointer;
+border-radius: 0 6px 6px 0;
+color: #fff;
+background-color: #256af0;
+}
+</style>
+</head>
+<body>
+    <form action="" name="validform" onsubmit="unsuffPass();">
+        <input type="password" name="password" id="" placeholder="set password">
+    <input type="submit">
+</form>
+</body>
+<script>
+function unsuffPass(){
+let password = document.validform.password.value; 
+if(password.length<6){
+alert("Password must be at least 6 characters long.");  
+}
+}
+</script>
+</html> -->

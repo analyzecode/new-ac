@@ -205,11 +205,15 @@ a.explore-button {
 }
 a.home-course-button{
     color: #3577F8;
+    margin: 2% 0;
     font-weight: 600;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
+}
+a.home-course-button img{
+    width: fit-content;
 }
 a.explore-button:hover {
     background: #4a84f7;
@@ -504,6 +508,10 @@ margin: 2% 0;
     .exnextbtns {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+    .exnextbtns.ftut1{
+        justify-content: center;
     }
     /* .next-page-btn {
         background: #0556f3;
@@ -566,14 +574,14 @@ margin: 2% 0;
         margin-right: 2%;
     }
     .pagination-text{
-        font-weight: 600;
+        font-weight: 600;  
+          color: #3b3b3b;
         font-size: 0.9rem;
         margin-bottom: 1%;
     }
     .nextpage-topic{
         font-size: 1.2rem;
         font-weight: 500;
-        color: #3b3b3b;
     }
     details summary i{
         transition: rotate 0.5s ease;
@@ -698,10 +706,13 @@ p.copyright-statement{
     line-height: 30px;
     margin-left: 2%;
     font-size: 1rem;
+}*/
+.codeEdit-top{
+    border-bottom: 1px solid #D3DCE6;
 }
-.codeEdit-top .mobile-toggle-Window{
+ .codeEdit-top .mobile-toggle-Window{
     display: none;
-}
+} 
 
 .icons-block{
     display: flex;
@@ -740,7 +751,7 @@ p.copyright-statement{
     cursor: pointer;
     width: 35%;
     font-size: 1.6rem;
-}*/
+}
 .social-share{
     display: flex;
     align-items: center;
@@ -819,7 +830,7 @@ p.copyright-statement{
 .editor-container{
     display: flex;
     width: 100%;
-    height: 81vh;
+    min-height: 81vh;   
  }
 .codeEdit-block{
     display: flex;
@@ -846,20 +857,19 @@ p.copyright-statement{
      color: #121212;
     /* border-left: 1px solid rgb(239, 237, 237); */
   }
-  iframe.codeOutput{
+.codeOutput{
     width: 50%;
     overflow-y: scroll;
-
   }
 
 .codeEditorBody{
     height: 100%;
     overflow: hidden;
 }
-@media (max-width: 1140px) {
-    nav {
-        width: 55%;
-    }
+    @media (max-width: 1140px) {
+        nav {
+            width: 55%;
+        }
     html{
         font-size: 13px;
     }
@@ -880,6 +890,9 @@ p.copyright-statement{
         .tut-content-block img{
         width: -webkit-fill-available;
         }
+        a.home-course-button img{
+            width: fit-content;
+        }
         .tut-content-sidebar{
         display: none;
         }
@@ -892,9 +905,11 @@ p.copyright-statement{
         p.copyright-statement{
             font-size: 1.2rem;
         }
+        .codeEdit-block{
+            width: 50%;
+        }
 }
-
-@media (max-width: 992px) {
+@media (max-width: 990px) {
     input[type="submit"]{
         padding: 3%; 
            font-size: 1.2rem;
@@ -986,7 +1001,7 @@ p.copyright-statement{
     .editor-container{
         min-height: 85vh;
     }
-    iframe.codeOutput{
+    .codeOutput{
         width: 0;
     }
     .codeEdit-top{
@@ -1063,6 +1078,9 @@ p.copyright-statement{
     .large-heading {
         width: 80%;
         font-size: 1.8rem;
+    }
+    .pagination-text{
+        font-size: 1rem;
     }
     .web-banner{
         flex-direction: column;
