@@ -52,6 +52,7 @@ img.hr-line{
 .openLogin{
     width: 15%;
     text-align: center;
+    visibility: hidden;
 }
 .openLogin button{
     background-color: #ecf2ff;
@@ -513,49 +514,7 @@ margin: 2% 0;
     .exnextbtns.ftut1{
         justify-content: center;
     }
-    /* .next-page-btn {
-        background: #0556f3;
-        color: white;
-        padding: 2%;
-        width: 28%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 5px;
-    }
-    .previous-page-btn{
-        background: #f9fafe;
-        padding: 2%;
-        width: 28%;
-        display: flex;
-        align-items: center;
-        justify-content: space;
-    } */
-    /* .previous-page-btn .nextpage-topic{
-        font-weight: 700;
-        color: #0556F3;
-    }
-    .pagination-turnover {
-        width: 60%;
-        font-weight: 500;
-    }
-    .previous-page-btn .pagination-turnover{
-        width: 100%;
-    }
-    .previous-page-btn .pagination-text{
-        color: #0556F3;
-        font-weight: 600;
-    }
-    .pagination-text {
-        color: rgba(255, 255, 255, .8);
-    }
-    .nextpage-topic {
-        font-weight: 600;
-        color: white;
-    }
-    .next-page-btn i{
-        color: white;
-    } */
+    
     .next-page-btn, .previous-page-btn{
         display: flex;
         width: 40%;
@@ -758,12 +717,24 @@ p.copyright-statement{
     margin: 2% 0;
 }
 .social-share a{
+    display: flex;
     margin-right: 1%;
+    border-radius: 4px;
+    width: 20%;
+    align-items: center;
+    border: 1px solid #ededed;
+    justify-content: center;
+    padding: 1%;
+    color: #25265E;
+    font-weight: 500;
 }
 .social-share a img{
+    margin-right: 4%;
+}
+/* .social-share a img{
     width: 40px;
     height: 40px;
-}
+} */
 .UserReactPool, .sharePage{
     width: 100%;
 }
@@ -1129,9 +1100,7 @@ align-items: center;
     .logo{
         width: 60%;
     }
-    .openLogin{
-        width: 20%;
-    }
+
     ul.content-qualities li i.bx-md {
         font-size: 1.2rem !important;
     }
