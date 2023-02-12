@@ -830,7 +830,9 @@ p.copyright-statement{
 .editor-container{
     display: flex;
     width: 100%;
-    min-height: 81vh;   
+    background: #FBFBFB;
+     color: #121212;
+    height: 81vh;
  }
 .codeEdit-block{
     display: flex;
@@ -850,6 +852,7 @@ p.copyright-statement{
   }
   .lines{
     width:5%;
+    min-height: fit-content;
     border-right: 1px solid #D3DCE6 ;
   }
   [contenteditable] div{
@@ -859,6 +862,7 @@ p.copyright-statement{
   }
 .codeOutput{
     width: 50%;
+    background-color: #fff;
     overflow-y: scroll;
   }
 
@@ -999,7 +1003,7 @@ p.copyright-statement{
         width: 100%;
     }
     .editor-container{
-        min-height: 85vh;
+        height: 85vh;
     }
     .codeOutput{
         width: 0;
