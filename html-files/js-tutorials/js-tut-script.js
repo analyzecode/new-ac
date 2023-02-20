@@ -32,6 +32,19 @@ if(password.length<6){
   alert("Password must be at least 6 characters long.");  
 }
 }
+const All_Details = document.querySelectorAll('details');
+
+All_Details.forEach(deet=>{
+  deet.addEventListener('toggle', toggleOpenOneOnly)
+})
+
+function toggleOpenOneOnly(e) {
+  if (this.open) {
+    All_Details.forEach(deet=>{
+      if (deet!=this && deet.open) deet.open = false
+    });
+  }
+}
 countbtn.addEventListener("click", () =>{
       count++;
       btncount.innerHTML = count;
