@@ -6,7 +6,7 @@ footer = document.querySelector(".footer"),
 countbtn = document.querySelector(".countme");
 let btncount = document.querySelector(".count");
 let count = 0;
-fetch('cstopaarea.html')
+fetch('cstoparea.html')
 .then(component => component.text())
 .then(data=>{
 landingpage.innerHTML =data
