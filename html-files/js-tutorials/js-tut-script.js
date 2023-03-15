@@ -16,7 +16,7 @@ fetch('topaarea.html')
 // .then(data=>{
 //   sharePool.innerHTML = data
 // });
-fetch('footer.html')
+fetch('../footer.html')
 .then(component => component.text())
 .then(data=>{
   footer.innerHTML = data

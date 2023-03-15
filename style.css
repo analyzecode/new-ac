@@ -1,29 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #c8cbcf; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b6b7b8; 
-  }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: all .3s ease;
 }
-
 html {
     scroll-behavior: smooth;
     content-visibility: auto;
@@ -311,7 +294,10 @@ table{
     border-radius: 2px;
 }
 table td{
-    padding-left: 1%;
+    padding: 1%;
+    overflow-wrap: break-word;
+    
+
 }
 .tut-content-show-content table td a{
     font-size: 1rem;
@@ -525,11 +511,10 @@ margin: 2% 0;
         margin: 2%;
         text-decoration: none;
         font-weight: 500;
-    }
+    } 
     .exnextbtns {
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
     .exnextbtns.ftut1{
         justify-content: center;
@@ -886,6 +871,73 @@ align-items: center;
     height: 100%;
     overflow: hidden;
 }
+
+
+.exgrid{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    justify-content: center;
+    margin: 4% 0;
+    gap: 2%;
+}
+.excard{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    align-items: center;
+    margin: 3% 0;
+    padding: 2%;
+    border: 1px solid #ddd;
+}
+.excard:hover{
+    box-shadow: 0px 2px 4px rgb(100 100 100 / 40%);
+
+}
+.excard iframe{
+    margin: 2% 0;
+    height: 200px;
+    width: 100%;
+}
+.excard p.count-ex{
+    background-color: #eaf1ff;
+    color: #0556F3;
+    margin: 2% 0;
+    text-align: center;
+    padding: 2%;
+    border-radius: 50%;
+    width: 40px;
+    
+}
+.excard a{
+font-weight: 500;
+text-decoration: none;
+display: inline-block;
+margin: 2% 0;
+color: #0556F3;
+    padding:2%;
+    width:80%;
+    border-radius: 6px;
+text-align: center;
+border: 2px solid #0556F3;
+}
+.excard a:hover{
+    background: #0556F3;
+    color: #fff;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
     @media (max-width: 1140px) {
         nav {
             width: 55%;
@@ -1005,6 +1057,13 @@ align-items: center;
         }
 }
 @media (max-width: 768px) {
+  .exgrid{
+    grid-template-columns: 90%;
+    gap: 1%;
+  }
+ .excard p.count-ex{
+    width: 35px;
+ }
     table td{
         padding: 1%;
         overflow-wrap: break-word;
@@ -1109,6 +1168,9 @@ align-items: center;
     .large-heading {
         width: 80%;
         font-size: 1.8rem;
+    }
+    .sub-nav a.active{
+        color: #0556F3;
     }
     .pagination-text{
         font-size: 1rem;
