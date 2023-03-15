@@ -873,19 +873,18 @@ align-items: center;
 
 
 .exgrid{
-    display: grid;
-    grid-template-columns: 25% 25% 25%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 4% 0;
-    margin-bottom: 8%;
-    gap: 2%;
+    margin: 1% 0;
 }
 .excard{
     display: flex;
+    width:25%;
     flex-direction: column;
     border-radius: 8px;
     align-items: center;
-    margin: 3% 0;
+    margin: 1% 3%;
     background-color: #fff;
     padding: 2%;
     border: 1px solid #ddd;
@@ -1060,8 +1059,10 @@ text-align: center;
 }
 @media (max-width: 768px) {
   .exgrid{
-    grid-template-columns: 90%;
-    gap: 1%;
+   flex-direction: column;
+  }
+  .excard{
+    width: 90%;
   }
  .excard p.count-ex{
     width: 35px;
