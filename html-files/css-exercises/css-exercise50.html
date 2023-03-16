@@ -59,12 +59,12 @@
   })
   let Codeeditor = document.querySelector(".codeEditor"),
               codeOutput = document.querySelector(".codeOutput");
-  fetch('cssprograms/cssprogram50.html')
+  fetch('cssprograms/cssProgram50.html')
 .then(component => component.text())
 .then(data=>{
    
   Codeeditor.innerText =data;
-  codeOutput.src = "cssprograms/cssprogram50.html";
+  codeOutput.src = "cssprograms/cssProgram50.html";
 });
 function rcode(){
                 let htmCode = Codeeditor.textContent;
