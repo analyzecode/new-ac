@@ -650,7 +650,7 @@ p.copyright-statement{
     padding: 0.9% 3.5%;
 }
 /* blobs , shapes */
-.jsblob1, .jsblob2{
+.jsblob1, .jsblob2, .mysqlblob2{
     position: absolute;
     z-index: -1;
     top: 0;
@@ -658,6 +658,10 @@ p.copyright-statement{
 .jsblob2{
     right: -16px;
     top: 243px;
+}
+.mysqlblob2{
+    right: -16px;
+    top: 134px;
 }
 /* Voting pool */
 
