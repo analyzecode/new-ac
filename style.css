@@ -298,6 +298,20 @@ table td{
     
 
 }
+table th.sno{
+    padding: 1%;
+    
+    width: 55px;
+
+}
+pre.txtbox{
+    border-left: 6px solid #0556f3;
+    display: inline-block;
+    padding: 2%;
+    margin: 2% 0;
+    background: aliceblue;
+}
+
 .tut-content-show-content table td a{
     font-size: 1rem;
 }
@@ -1273,8 +1287,8 @@ text-align: center;
         .tutorial-banner-text.mobile{
             margin-top: 0%;
         }
-        .tutorial-banner-text img{
-            width: 57px;
+        .tutorial-banner-text img.mysql{
+            width: 99px;
             margin-left: 16%;
         }	
         
