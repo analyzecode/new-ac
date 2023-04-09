@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF | PL/SQl</title>
+    <meta name="keywords" content="PL/SQl tricks, Features, PL/SQl">
+    <meta name="description" content="free PL/SQl tutorials for beginners step by step">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="../../images/site-logo.svg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="landingpage" id="landingpage"></section>
+   <a href="#"> <i class='bx bx-md bxs-chevron-up gotoup'></i></a>
+    <section class="tut-content-block" id="tutContentBlock">
+       <div class="tut-content-sidebar">
+        <p class="tut-content-sidebar-heading">Page Index</p>
+        <details class="sidebarDetail">
+            <summary>PL/SQL Introduction <i class='bx bxs-chevron-down'></i></summary>
+            <ul>
+                <li><a href="plsql-tut1.html"><i class="fa-regular fa-circle-check"></i>Getting Started</a></li>
+                <li><a href="plsql-tut2.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Variables</a></li>
+                <li><a href="plsql-tut3.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Constant</a></li>
+            </ul>
+        </details>
+        <details class="sidebarDetail" open>
+            <summary>Control Statements<i class='bx bxs-chevron-down'></i></summary>
+            <ul>
+                <li><a href="plsql-tut4.html"  class="tutitemactive"><i class="fa-regular fa-circle-check"></i>PL/SQL IF</a></li>
+                <li><a href="plsql-tut5.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Case</a></li>
+                <li><a href="plsql-tut6.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Loop</a></li>
+                <li><a href="plsql-tut7.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL ExitLoop</a></li>
+                <li><a href="plsql-tut8.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL WhileLoop</a></li>
+                <li><a href="plsql-tut9.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL For Loop</a></li>
+                <li><a href="plsql-tut10.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Continue</a></li>
+                <li><a href="plsql-tut11.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL GOTO</a></li>
+            </ul>
+        </details>
+        <details class="sidebarDetail">
+            <summary>PLSQL Concepts<i class='bx bxs-chevron-down'></i></summary>
+            <ul>
+                <li><a href="plsql-tut12.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Procedure</a></li>
+                <li><a href="plsql-tut13.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Function</a></li>
+                <li><a href="plsql-tut14.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Cursor</a></li>
+                <li><a href="plsql-tut15.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Exception</a></li>
+                <li><a href="plsql-tut16.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Trigger</a></li>
+               </ul>
+        </details>
+
+
+
+
+       
+       </div>
+        <div class="tut-content-show-content">
+            <p class="medium-heading">IF in PL/SQL</p>
+        
+   
+        
+          <p class="tutcontent-description">  PL/SQL supports the programming language features like conditional statements and iterative statements. Its programming constructs are similar to how you use in programming languages like Java and C++. </p>
+
+
+
+          <p class="tutcontent-description">  Syntax for IF Statement: </p>
+
+<p class="tutcontent-description">There are different syntaxes for the IF-THEN-ELSE statement. </p>
+<p class="tutcontent-subheading">
+Syntax: (IF-THEN statement):
+ </p>
+
+<pre class="txtbox">
+    IF condition   
+    THEN   
+    Statement: {It is executed when condition is true}  
+    END IF;
+</pre>  
+<p class="tutcontent-description">This syntax is used when you want to execute statements only when condition is TRUE.</p>
+<p class="tutcontent-subheading">
+Syntax: (IF-THEN-ELSE statement): </p>
+<pre class="txtbox">
+IF condition   
+THEN  
+   {...statements to execute when condition is TRUE...}  
+ELSE  
+   {...statements to execute when condition is FALSE...}  
+END IF;  
+</pre> 
+<p class="tutcontent-description">
+    This syntax is used when you want to execute one set of statements when condition is TRUE or a different set of statements when condition is FALSE.
+
+</p><p class="tutcontent-subheading">
+Syntax: (IF-THEN-ELSIF statement): </p>
+
+<pre class="txtbox">
+IF condition1   
+THEN  
+   {...statements to execute when condition1 is TRUE...}  
+ELSIF condition2   
+THEN  
+   {...statements to execute when condition2 is TRUE...}  
+END IF; 
+</pre>
+<p class="tutcontent-description"> 
+This syntax is used when you want to execute one set of statements when condition1 is TRUE or a different set of statements when condition2 is TRUE.
+</p>
+<p class="tutcontent-subheading">
+Syntax: (IF-THEN-ELSIF-ELSE statement): </p>
+<pre class="txtbox">
+IF condition1   
+THEN  
+   {...statements to execute when condition1 is TRUE...}  
+ELSIF condition2   
+THEN  
+   {...statements to execute when condition2 is TRUE...}  
+ELSE  
+   {...statements to execute when both condition1 and condition2 are FALSE...}  
+END IF;   
+
+</pre>
+<p class="tutcontent-description">
+        For example :
+</p>
+<img src="../../images/plsql-if.svg" alt="">
+<p class="tutcontent-description">Output :</p>
+<img src="../../images/plsql-if-output.svg" alt="">
+<p class="tutcontent-description">Now that you know if in PL/SQL, let's jump to cases in PL/SQL</p>
+            <hr class="hr-line">
+            <div class="exnextbtns">
+                <a href="plsql-tut3.html" class="previous-page-btn">
+                    <div class="pagination-turnover">
+                        <p class="pagination-text">Previous</p>
+                        <p class="nextpage-topic">PL/SQl Constants</p>
+                    </div>
+                </a>
+            <a href="plsql-tut5.html" class="next-page-btn">
+                <div class="pagination-turnover">
+                    <p class="pagination-text">Next : </p>
+                    <p class="nextpage-topic">PL/SQL CASE</p>
+                </div>
+                <i class='bx bx-md bx bx-right-arrow-alt bx-fade-right-hover' id="arrow-right"></i>
+            </a>
+        </div>
+            <p class="tutcontent-subheading">Share this page on : </p>
+            <div class="social-share">
+                <a target="_blank" class="faceBookBtn" href=""><img src="../../images/facebook-logo.svg" alt="">FaceBook</a>
+                <a target="_blank" class="whatsappShareBtn" href=""><img src="../../images/whatsapp-logo.svg" alt="">Whatsapp</a>
+                <a target="_blank" class="tweetBtn" href=""><img src="../../images/twitter-logo.svg" alt="">Twitter</a>
+            </div>
+           
+        </div>
+    </section>
+    <div class="footer"></div>
+    <p class="copyright-statement">© 2022 AnalyzeCode.com All rights reserved.</p>
+</body>
+<script src="plsql-script.js"></script>
+<script>
+    let whatsappShareBtn = document.querySelector("a.whatsappShareBtn");
+// whatsappShareBtn.href = "whatsapp://send?text=" + document.URL;
+whatsappShareBtn.href = "https://api.whatsapp.com//send?text=Check+this+awesome+article+on+"+document.title+"%20"+document.URL;
+let tweetBtn = document.querySelector("a.tweetBtn");
+tweetBtn.href= "https://twitter.com/intent/tweet?url="+document.URL;
+let faceBookBtn = document.querySelector("a.faceBookBtn");
+faceBookBtn.href = "http://www.facebook.com/share.php?u="+document.URL;
+
+</script>
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</html>

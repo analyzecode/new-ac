@@ -269,7 +269,10 @@ ul.content-qualities li {
     font-size: 1.2rem;
     margin: 2% 0;
 }
-
+ol.qna-container{
+    width: 80%;
+    margin: 2% auto;
+}
 .arrow-container {
     display: flex;
     justify-content: center;
@@ -415,13 +418,17 @@ margin: 2% 0;
 .tut-content-sidebar details {
     border: 1px solid #ddd;
     border-top: 0;
+    transition: all .5s ease-in-out;
 }
-.tutcontent-subheading {
+.tutcontent-subheading, ol.qna-container li {
     font-weight: 500;
     line-height: 30px;
     font-size: 1.3rem;
     color: #25265E;
     margin: 3% 0;
+}
+ol.qna-container li p.tutcontent-description{
+    font-weight: 400;
 }
 .gotoup{
     background-color: #0556F3;
@@ -460,7 +467,7 @@ margin: 2% 0;
     color: red;
     margin: 0 6%;
 }
-.tutcontent-description {
+.tutcontent-description{
     margin: 3% 0;
     line-height: 30px;
     color: #25265e;
@@ -674,11 +681,18 @@ p.copyright-statement{
     top: 243px;
 }
 .mysqlblob2{
-    right: -16px;
-    top: 134px;
+    right: -95px;
+    top: 150px;
+}
+.mysqlblob2 img{
+    height:220px;
 }
 /* Voting pool */
-
+iframe{
+    border: 1px solid #d8d7d7;
+    width: 50%;
+    overflow: hidden;
+}
 /* .share-pool-block{
     display: flex;
     margin: 3% 0;
@@ -886,6 +900,13 @@ align-items: center;
      color: #121212;
     /* border-left: 1px solid rgb(239, 237, 237); */
   }
+  p.black-bgcode,pre.black-bgcode{
+    background:#000;
+    color: #fff;
+    padding: 1%;
+    margin:2% 0;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.05);
+  }
 .codeOutput{
     width: 50%;
     background-color: #fff;
@@ -972,6 +993,10 @@ text-align: center;
     html{
         font-size: 13px;
     }
+    .mysqlblob2 {
+        right: -95px;
+        top: 114px;
+    }
     .logo {
         width: 25%;
     }
@@ -1017,6 +1042,9 @@ text-align: center;
     input[type="submit"]{
         padding: 3%; 
            font-size: 1.2rem;
+    }
+    .mysqlblob2 img {
+        height: 175px;
     }
    .countme{
     width: 50%;
@@ -1197,6 +1225,10 @@ text-align: center;
     .large-heading {
         width: 80%;
         font-size: 1.8rem;
+    }
+    .mysqlblob2 {
+        right: -95px;
+        top: 135px;
     }
     .sub-nav a.active{
         color: #0556F3;

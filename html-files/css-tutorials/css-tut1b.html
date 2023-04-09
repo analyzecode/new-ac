@@ -21,10 +21,10 @@
         <details class="sidebarDetail" open>
             <summary>CSS Introduction <i class='bx bxs-chevron-down'></i></summary>
             <ul>
-                <li><a href="css-tut0.html" class="tutitemactive"><i class="fa-regular fa-circle-check"></i>Getting Started</a></li>
-                <li><a href="css-tut1a.html" ><i class="fa-regular fa-circle-check"></i>CSS Syntax</a></li>
+                <li><a href="css-tut0.html"><i class="fa-regular fa-circle-check"></i>Getting Started</a></li>
+                <li><a href="css-tut1a.html"><i class="fa-regular fa-circle-check"></i>CSS Syntax</a></li>
 
-                <li><a href="css-tut1b.html" ><i class="fa-regular fa-circle-check"></i>CSS Background</a></li>
+                <li><a href="css-tut1b.html"  class="tutitemactive" ><i class="fa-regular fa-circle-check"></i>CSS Background</a></li>
                 <li><a href="css-tut1c.html" ><i class="fa-regular fa-circle-check"></i>CSS Selectors</a></li>
                 <li><a href="css-tut1d.html" ><i class="fa-regular fa-circle-check"></i>CSS Comments</a></li>
                 <li><a href="css-tut1e.html" ><i class="fa-regular fa-circle-check"></i>CSS How to</a></li>
@@ -52,36 +52,73 @@
 
        </div>
         <div class="tut-content-show-content">
-            <p class="medium-heading">Getting Started With CSS</p>
-           <p class="tutcontent-description"> CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the look and formatting of a document written in markup language. It provides an additional feature to HTML. It is generally used with HTML to change the style of web pages and user interfaces. It can also be used with any kind of XML documents including plain XML, SVG and XUL.</p>
+            <p class="medium-heading">CSS Background</p>
+           <p class="tutcontent-description"> CSS background property is used to define the background effects on element. There are 5 CSS background properties that affects the HTML elements:</p>
+<ol>
+           <li> <p class="tutcontent-description"> background-color </p> </li>
+           <li> <p class="tutcontent-description"> background-image </p> </li>
+           <li> <p class="tutcontent-description"> background-repeat </p> </li>
+           <li> <p class="tutcontent-description"> background-attachment </p> </li>
+           <li> <p class="tutcontent-description"> background-position </p> </li>
+</ol>
+<p class="tutcontent-subheading">1) CSS background-color</p>
 <p class="tutcontent-description">
-CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and user interfaces for many mobile applications.</p>
-<p class="small-heading"> What does CSS do </p>
-<p class="tutcontent-description"> You can add new looks to your old HTML documents. </p>
-<p class="tutcontent-description"> You can completely change the look of your website with only a few changes in CSS code. </p>
+    The background-color property is used to specify the background color of the element.</p>
+<p class="tutcontent-description">For example :</p>
+<iframe src="css-tut-fetch-Codes/codestxt/p1.html" frameborder="0"></iframe>
+<a href="css-tut-fetch-Codes/ceP1.html" class="home-course-button" target="_blank"> Run code <img src="../../images/Double Right icon.svg" alt=""></a>
 
-<p class="small-heading"> Why use CSS </p>
-These are the three major benefits of CSS: </p>
 
-<p class="tutcontent-subheading"> 1) Solves a big problem </p>
-<p class="tutcontent-description"> Before CSS, tags like font, color, background style, element alignments, border and size had to be repeated on every web page. This was a very long process. For example: If you are developing a large website where fonts and color information are added on every single page, it will be become a long and expensive process. CSS was created to solve this problem. It was a W3C recommendation. </p>
+<p class="tutcontent-subheading">2) CSS background-image</p>
+<p class="tutcontent-description">
+    The background-image property is used to set an image as a background of an element. By default the image covers the entire element. You can set the background image for a page like this.</p>
+<p class="tutcontent-description">For example :</p>
+<iframe src="css-tut-fetch-Codes/codestxt/p2.html" frameborder="0"></iframe>
+<a href="css-tut-fetch-Codes/ceP2.html" class="home-course-button" target="_blank"> Run code <img src="../../images/Double Right icon.svg" alt=""></a>
 
-<p class="tutcontent-subheading"> 2) Saves a lot of time </p>
-<p class="tutcontent-description"> CSS style definitions are saved in external CSS files so it is possible to change the entire website by changing just one file. </p>
+<p class="tutcontent-subheading">3) CSS background-repeat</p>
+<p class="tutcontent-description">
+    By default, the background-image property repeats the background image horizontally and vertically. Some images are repeated only horizontally or vertically.
+</p> <p class="tutcontent-description">
+The background looks better if the image not repeated multiple times.</p>
+<p class="tutcontent-description">For example :</p>
+<iframe src="css-tut-fetch-Codes/codestxt/p3.html" frameborder="0"></iframe>
+<a href="css-tut-fetch-Codes/ceP3.html" class="home-course-button" target="_blank"> Run code <img src="../../images/Double Right icon.svg" alt=""></a>
 
-<p class="tutcontent-subheading"> 3) Provide more attributes </p>
-<p class="tutcontent-description"> CSS provides more detailed attributes than plain HTML to define the look and feel of the website. </p>
+<p class="tutcontent-subheading">4) CSS background-attachment</p>
+<p class="tutcontent-description">
+    The background-attachment property is used to specify if the background image is fixed or scroll with the rest of the page in browser window. If you set fixed the background image then the image will not move during scrolling in the browser. Let?s take an example with fixed background image.
+</p>
+<pre class="black-bgcode">
+    background-attachment: fixed;  
+</pre>
 
-            <p class="tutcontent-description">Now that you know what is CSS, let's learn the
-                Syntax of CSS</p>
+<p class="tutcontent-subheading">5) CSS background-position</p>
+<p class="tutcontent-description"> The background-position property is used to define the initial position of the background image. By default, the background image is placed on the top-left of the webpage.</p>
+
+<p class="tutcontent-description"> You can set the following positions:</p>
+<ul>
+<li> <p class="tutcontent-description"> center</p> </li>
+<li> <p class="tutcontent-description"> top</p> </li>
+<li> <p class="tutcontent-description"> bottom</p> </li>
+<li> <p class="tutcontent-description"> left</p> </li>
+</ul>
+
+
+            <p class="tutcontent-description">Now that you know ways to style background of any tag CSS, let's learn the
+                selectors of CSS</p>
             <hr class="hr-line">
-            <div class="exnextbtns ftut1">
-                <a href="css-tut0.html" class="previous-page-btn" style="display: none;">
-</a>
-                <a href="css-tut1a.html" class="next-page-btn">
+            <div class="exnextbtns">
+                <a href="css-tut1a.html" class="previous-page-btn">
+                    <div class="pagination-turnover">
+                        <p class="pagination-text">Previous</p>
+                        <p class="nextpage-topic">CSS Syntax</p>
+                    </div>
+                </a>
+                <a href="css-tut1c.html" class="next-page-btn">
                     <div class="pagination-turnover">
                         <p class="pagination-text">Next : </p>
-                        <p class="nextpage-topic">CSS Syntax</p>
+                        <p class="nextpage-topic">CSS Selectors </p>
                     </div>
                     <i class='bx bx-md bx bx-right-arrow-alt bx-fade-right-hover' id="arrow-right"></i>
                 </a>

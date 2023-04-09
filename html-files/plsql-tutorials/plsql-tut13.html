@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function | PL/SQl</title>
+    <meta name="keywords" content="PL/SQl tricks, Features, PL/SQl">
+    <meta name="description" content="free PL/SQl tutorials for beginners step by step">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" href="../../images/site-logo.svg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="landingpage" id="landingpage"></section>
+   <a href="#"> <i class='bx bx-md bxs-chevron-up gotoup'></i></a>
+    <section class="tut-content-block" id="tutContentBlock">
+       <div class="tut-content-sidebar">
+        <p class="tut-content-sidebar-heading">Page Index</p>
+        <details class="sidebarDetail">
+            <summary>PL/SQL Introduction <i class='bx bxs-chevron-down'></i></summary>
+            <ul>
+                <li><a href="plsql-tut1.html"><i class="fa-regular fa-circle-check"></i>Getting Started</a></li>
+                <li><a href="plsql-tut2.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Variables</a></li>
+                <li><a href="plsql-tut3.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Constant</a></li>
+            </ul>
+        </details>
+        <details class="sidebarDetail">
+            <summary>Control Statements<i class='bx bxs-chevron-down'></i></summary>
+            <ul>
+                <li><a href="plsql-tut4.html"><i class="fa-regular fa-circle-check"></i>PL/SQL IF</a></li>
+                <li><a href="plsql-tut5.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Case</a></li>
+                <li><a href="plsql-tut6.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Loop</a></li>
+                <li><a href="plsql-tut7.html"><i class="fa-regular fa-circle-check"></i>PL/SQL ExitLoop</a></li>
+                <li><a href="plsql-tut8.html"><i class="fa-regular fa-circle-check"></i>PL/SQL WhileLoop</a></li>
+                <li><a href="plsql-tut9.html"><i class="fa-regular fa-circle-check"></i>PL/SQL For Loop</a></li>
+                <li><a href="plsql-tut10.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Continue</a></li>
+                <li><a href="plsql-tut11.html"><i class="fa-regular fa-circle-check"></i>PL/SQL GOTO</a></li>
+            </ul>
+        </details>
+        <details class="sidebarDetail" open>
+            <summary>PLSQL Concepts<i class='bx bxs-chevron-down'></i></summary>
+            <ul>
+                <li><a href="plsql-tut12.html"><i class="fa-regular fa-circle-check"></i>PL/SQL Procedure</a></li>
+                <li><a href="plsql-tut13.html"  class="tutitemactive" ><i class="fa-regular fa-circle-check"></i>PL/SQL Function</a></li>
+                <li><a href="plsql-tut14.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Cursor</a></li>
+                <li><a href="plsql-tut15.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Exception</a></li>
+                <li><a href="plsql-tut16.html" ><i class="fa-regular fa-circle-check"></i>PL/SQL Trigger</a></li>
+               </ul>
+</details>
+
+
+       </div>
+        <div class="tut-content-show-content">
+            <p class="medium-heading">Functions in PL/SQL</p>
+
+
+           <p class="tutcontent-description"> The PL/SQL Function is very similar to PL/SQL Procedure. The main difference between procedure and a function is, a function must always return a value, and on the other hand a procedure may or may not return a value. Except this, all the other things of PL/SQL procedure are true for PL/SQL function too.
+</p>
+           <p class="tutcontent-subheading"> Syntax to create a function:
+<pre class="txtbox">          
+CREATE [OR REPLACE] FUNCTION function_name [parameters]  
+[(parameter_name [IN | OUT | IN OUT] type [, ...])]  
+RETURN return_datatype  
+{IS | AS}  
+BEGIN  
+   &lt; function_body &gt;  
+END [function_name];  
+</pre>
+
+
+           <p class="tutcontent-subheading"> Here:</p>
+            <ul>
+          <li> <p class="tutcontent-description"> Function_name: specifies the name of the function.</p></li>
+          <li> <p class="tutcontent-description"> [OR REPLACE] option allows modifying an existing function.</p></li>
+          <li> <p class="tutcontent-description"> The optional parameter list contains name, mode and types of the parameters.</p></li>
+          <li> <p class="tutcontent-description"> IN represents that value will be passed from outside and OUT represents that this parameter will be used to return a value outside of the procedure.</p></li>
+          <li> <p class="tutcontent-description"> The function must contain a return statement.</p></li>
+          <li> <p class="tutcontent-description"> RETURN clause specifies that data type you are going to return from the function.</p></li>
+          <li> <p class="tutcontent-description"> Function_body contains the executable part.</p></li>
+          <li> <p class="tutcontent-description"> The AS keyword is used instead of the IS keyword for creating a standalone function.</p></li>
+          </ul>
+            <p class="tutcontent-subheading"> PL/SQL Function Example</p>
+<img src="../../images/plsql-function.svg" alt="">
+<p class="tutcontent-description">Output :</p>
+<pre class="black-bgcode">
+Addition is: 33
+Statement processed.
+0.05 seconds
+</pre>
+  
+
+
+
+ <p class="tutcontent-description">Let's learn Cursors in PL/SQL</p>
+            <hr class="hr-line">
+            <div class="exnextbtns">
+                <a href="plsql-tut12.html" class="previous-page-btn">
+                    <div class="pagination-turnover">
+                        <p class="pagination-text">Previous</p>
+                        <p class="nextpage-topic">PL/SQl Procedure</p>
+                    </div>
+                </a>
+            <a href="plsql-tut14.html" class="next-page-btn">
+                <div class="pagination-turnover">
+                    <p class="pagination-text">Next : </p>
+                    <p class="nextpage-topic">PL/SQL Cursor</p>
+                </div>
+                <i class='bx bx-md bx bx-right-arrow-alt bx-fade-right-hover' id="arrow-right"></i>
+            </a>
+        </div>
+            <p class="tutcontent-subheading">Share this page on : </p>
+            <div class="social-share">
+                <a target="_blank" class="faceBookBtn" href=""><img src="../../images/facebook-logo.svg" alt="">FaceBook</a>
+                <a target="_blank" class="whatsappShareBtn" href=""><img src="../../images/whatsapp-logo.svg" alt="">Whatsapp</a>
+                <a target="_blank" class="tweetBtn" href=""><img src="../../images/twitter-logo.svg" alt="">Twitter</a>
+            </div>
+           
+        </div>
+    </section>
+    <div class="footer"></div>
+    <p class="copyright-statement">© 2022 AnalyzeCode.com All rights reserved.</p>
+</body>
+<script src="plsql-script.js"></script>
+<script>
+    let whatsappShareBtn = document.querySelector("a.whatsappShareBtn");
+// whatsappShareBtn.href = "whatsapp://send?text=" + document.URL;
+whatsappShareBtn.href = "https://api.whatsapp.com//send?text=Check+this+awesome+article+on+"+document.title+"%20"+document.URL;
+let tweetBtn = document.querySelector("a.tweetBtn");
+tweetBtn.href= "https://twitter.com/intent/tweet?url="+document.URL;
+let faceBookBtn = document.querySelector("a.faceBookBtn");
+faceBookBtn.href = "http://www.facebook.com/share.php?u="+document.URL;
+
+</script>
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</html> 
